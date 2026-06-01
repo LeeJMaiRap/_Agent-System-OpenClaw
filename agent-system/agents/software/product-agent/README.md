@@ -1,24 +1,40 @@
 # Product Agent
 
-Status: draft profile
-
-This profile belongs to Phase 1 agent-system mapping.
+Status: `draft` specialist profile. Source files in this folder: `AGENT.md`, `skills.json`, `README.md`.
 
 ## Purpose
 
-Turns ideas into PRD, MVP scope, user stories, acceptance criteria, non-goals, and open questions.
+Defines product requirements: PRD/MVP scope, user stories, acceptance criteria, non-goals, assumptions, and open questions.
 
-## Skill Map
+## Skills
 
-See `skills.json`.
+- Primary: product-requirements
+- Supporting: project-planning
 
-## Typical Flow
+## Operating protocol
 
-1. Receive input from human, PM, or upstream agent.
-2. Load primary skill instructions.
-3. Produce assigned output only.
-4. Send blockers/handoff notes to next owner.
+For PM-led or multi-agent work, this agent must receive a scoped Specialist Task Packet and return a Specialist Task Report. Protocol and templates live in:
 
-## Cleanup / Evolution
+- `../../../docs/specialist-handoff-protocol.md`
+- `../../../templates/specialist-task-packet.md`
+- `../../../templates/specialist-task-report.md`
 
-This profile can be edited or replaced after validation runs in `agent-system/tests/`.
+## Expected outputs
+
+- PRD or requirements brief
+- MVP/scope boundary
+- User stories and acceptance criteria
+- Open questions/blockers
+
+## Boundaries
+
+- Defines what/why, not architecture or implementation plan.
+- No invented business facts, revenue promises, or compliance claims.
+- Ambiguous requirements must be surfaced, not silently assumed.
+
+## Handoff targets
+
+- PM Agent for planning
+- Frontend Agent for UX/UI spec
+- Backend Agent for API/data needs
+- QA Agent for acceptance test design

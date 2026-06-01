@@ -1,74 +1,35 @@
 # OpenClaw Workspace
 
-Workspace gọn sau cleanup lớn ngày 2026-05-26. Mục tiêu hiện tại: giữ khung sườn PM Agent hoạt động tốt, loại bỏ project/app/cache cũ khỏi cây chính.
+Current workspace for OpenClaw agent-system work. Root is intentionally small; active project assets live under `agent-system/`, continuity/audit notes under `memory/`.
 
-## Cấu trúc hiện tại
+## Current root structure
+
+- `agent-system/` — active agent definitions, adapted skills, docs, schemas, reports, tests, and utility tools.
+- `memory/` — continuity notes, migration/audit records, rollback context, and workspace-review artifacts.
+- `.openclaw/` — OpenClaw workspace state.
+- Root operating docs:
+  - `AGENTS.md` — workspace operating guide.
+  - `BEHAVIOR.md` — working discipline and safety rules.
+  - `HEARTBEAT.md` — optional periodic-check checklist.
+  - `IDENTITY.md` — assistant identity metadata.
+  - `SOUL.md` — persona/tone.
+  - `TOOLS.md` — local setup notes.
+  - `USER.md` — user/project context.
+
+## Active system
+
+Canonical PM Agent path:
 
 ```text
-workspace/
-├── systems/             # Agent systems; hiện giữ PM Agent là core
-├── projects/            # Portfolio index/skeleton, chưa chứa project code active
-├── ops/                 # Scripts vận hành, exports, tmp, logs, state
-├── shared/              # Assets/templates/schemas/utilities dùng chung
-├── memory/              # Daily/operational memory notes
-├── state/               # Workspace-level runtime state nhỏ
-├── tmp/                 # Scratch tạm, có thể dọn định kỳ
-├── AGENTS.md            # Workspace operating guide
-├── SOUL.md              # Persona/tone
-├── USER.md              # Thông tin người dùng
-└── README.md            # File này
+agent-system/agents/software/pm-agent/
 ```
 
-`.git/` và `.trash/` không thuộc cây vận hành chính. `.trash/cleanup-20260526-013600` đang giữ dữ liệu đã dọn để rollback thủ công nếu cần.
+Agent-System contains software and business/affiliate specialist profiles plus shared handoff protocol and skill library.
 
-## Quick Navigation
+## Not present in current workspace root
 
-### PM Agent
-- Path: `systems/pm-agent/`
-- Trạng thái: giữ nguyên, không xoá trong cleanup.
-- Bắt đầu đọc:
-  1. `systems/pm-agent/README.md`
-  2. `systems/pm-agent/STATUS.md`
-  3. `systems/pm-agent/architecture/WORKFLOW.md`
+Older README content referenced `systems/`, `projects/`, `ops/`, `shared/`, `state/`, `tmp/`, and `.trash/`. Those directories are not present in the current root snapshot. Do not treat old paths as current source of truth.
 
-### Projects
-- Path: `projects/`
-- Hiện chỉ giữ `_index/` để làm portfolio skeleton.
-- Project folders cũ đã được dọn khỏi cây chính. Khi có project mới, tạo lại theo lifecycle PM Agent.
+## Git baseline
 
-### Ops
-- Path: `ops/`
-- Chứa scripts/tooling vận hành và output không thuộc source framework.
-- Document/PDF tooling nằm tại `ops/scripts/document/`.
-- Voice sample exports nằm tại `ops/exports/voice/samples/`.
-
-### Shared / Memory / State / Tmp
-- `shared/`: vùng dùng chung, hiện là skeleton.
-- `memory/`: ghi chú continuity.
-- `state/`: state nhỏ cấp workspace.
-- `tmp/`: scratch tạm; không dùng làm nơi lưu artifact dài hạn.
-
-## Quy tắc vận hành
-
-1. **Không xoá PM Agent**: `systems/pm-agent/**` là core.
-2. **Source of truth theo folder**:
-   - PM Agent framework: `systems/pm-agent/`
-   - Project index/skeleton: `projects/`
-   - Runtime/export/tooling: `ops/`
-   - Scratch: `tmp/`
-3. **Không để output runtime trong `systems/`** trừ khi là artifact framework có chủ đích.
-4. **Không commit cache/dependency/build output** như `node_modules/`, `.venv*`, `.next/`, `dist/`, `build/`, `__pycache__/`.
-5. **Dọn bằng trash trước khi xoá vĩnh viễn** nếu còn khả năng cần rollback.
-
-## Git Hygiene
-
-- Baseline trước update hệ thống: `300527a`
-- Cleanup PM Agent skeleton: `c33a17d`
-- Snapshot lớn trước cleanup: `1217b2d`
-
-## Current Cleanup Notes
-
-- Workspace chính đã giảm còn khung gọn.
-- File root PDF tooling đã chuyển vào `ops/scripts/document/`.
-- Voice output sample đã chuyển vào `ops/exports/voice/samples/`.
-- README files đang phản ánh cấu trúc sau dọn dẹp.
+Current repository snapshot was initialized and pushed to GitHub as commit `dd67b5f` (`Initial workspace snapshot`) on branch `master`.

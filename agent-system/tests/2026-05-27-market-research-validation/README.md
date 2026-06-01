@@ -1,13 +1,23 @@
 # Market Research Agent Validation: 2026-05-27
 
-Purpose: validate Market Research Agent can receive controlled handoff from Business PM Agent and produce Paper-level affiliate market research without external actions.
+## Purpose
 
-Flow:
+Paper validation that Market Research Agent can receive controlled handoff and produce affiliate market research without external action.
 
-```text
-Business PM Agent -> Market Research Agent -> Business PM review -> next handoff recommendation
-```
+## Evidence files
 
-Verification Level: Paper.
+- `inputs/market-research-input.md`
+- `outputs/specialist-task-packet.md`
+- `outputs/market-research-report.md`
+- `outputs/specialist-task-report.md`
+- `test-report.md`
 
-No posting, messaging, ads, payment/API key use, purchases, scraping behind login, or external platform writes.
+## Result
+
+PASS at Paper level. Identified pains, safe campaign angles, and limitation notes; recommended Product Hunter handoff.
+
+## Limits / blockers
+
+- Findings are hypotheses from provided context, not validated demand.
+- No live web/marketplace validation, SKU scoring, posting, ads, purchases, or external writes.
+- Deal/value angle held until live price/voucher proof.

@@ -1,41 +1,23 @@
-# PM Agent Adapter Profile
+# PM Agent Adapter Profile — legacy
 
-> Legacy migration note (2026-05-29): this folder is archived historical adapter material. Active PM Agent is `agent-system/agents/software/pm-agent/`. Do not use this folder as active PM Agent.
+Status: `adapter-draft`, archived historical adapter material.
 
-Status: adapter-draft
+## Current truth
 
-## Important
-
-Canonical PM Agent already exists and remains unchanged:
+Active PM Agent now lives at:
 
 ```text
-systems/pm-agent/
+agent-system/agents/software/pm-agent/
 ```
 
-This folder is only an adapter/profile inside `agent-system` so future team/delegation design can reference PM Agent safely.
+This legacy folder is not active PM behavior. It is kept for migration/audit history only.
 
-## What changed here
+## Historical note
 
-Original draft profile was narrowed from “new PM Agent” to “adapter profile”.
+Files in this folder may still reference old `systems/pm-agent/` paths. That path is not present in the current workspace snapshot. Treat those references as historical, not current source of truth.
 
-It now:
+## Do not
 
-- points to `systems/pm-agent` as source of truth;
-- preserves PM Agent identity Lệ;
-- references existing workflow, policies, templates;
-- marks specialist handoff as proposed extension only;
-- keeps reviewed `agent-system` skills as optional aids.
-
-## Audit
-
-See:
-
-```text
-agent-system/audits/existing-pm-agent.md
-```
-
-## Do Not
-
-- Do not overwrite `systems/pm-agent`.
-- Do not treat this adapter as canonical PM Agent.
-- Do not activate specialist delegation without approved design.
+- Do not use this folder as canonical PM Agent.
+- Do not activate specialist delegation from this adapter.
+- Do not overwrite the active PM Agent based on this legacy material.

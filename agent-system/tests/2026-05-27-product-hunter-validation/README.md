@@ -1,13 +1,24 @@
 # Product Hunter Agent Validation: 2026-05-27
 
-Purpose: validate Product Hunter Agent can receive controlled handoff from Business PM Agent and produce Paper-level affiliate product hunting output using Market Research Agent findings as upstream input.
+## Purpose
 
-Flow:
+Paper validation that Product Hunter Agent can use Market Research findings and provided candidate data to produce a shortlist and claim boundaries.
 
-```text
-Business PM Agent -> Product Hunter Agent -> Business PM review -> Content Copy / Human approval gate
-```
+## Evidence files
 
-Verification Level: Paper.
+- `inputs/product-hunter-input.md`
+- `outputs/specialist-task-packet.md`
+- `outputs/product-hunting-report.md`
+- `outputs/specialist-task-report.md`
+- `test-report.md`
 
-No posting, messaging, ads, payment/API key use, purchases, add-to-cart, affiliate link changes, or external platform writes.
+## Result
+
+PASS at Paper level. Primary: P2 Extendable Floor Phone Tripod; secondary: P1 Mini Desk Phone Tripod; hold: P3 Ring Light Tripod Kit; avoid primary: P4 Ultra-cheap Phone Stand.
+
+## Limits / blockers
+
+- Candidate data synthetic/provided.
+- No live proof for price/voucher/stock/seller reliability/authenticity/reviews/sales/testing.
+- No best/cheapest/strong-quality/personal-use claims.
+- Live marketplace validation required before product-specific copy or publishing.

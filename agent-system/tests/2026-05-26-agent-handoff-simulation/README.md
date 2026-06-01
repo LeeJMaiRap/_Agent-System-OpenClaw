@@ -1,29 +1,28 @@
 # Agent Handoff Simulation: 2026-05-26
 
-> Historical migration note (2026-05-29): this README describes the validation context at the time it was created. Active PM Agent now lives at `agent-system/agents/software/pm-agent/`; old PM Adapter references are historical.
+## Purpose
 
-Purpose: validate Phase 1 agent profiles and `skills.json` mapping after PM Agent draft profile was converted into adapter profile.
+Historical Paper simulation for software and affiliate handoffs.
 
-Canonical PM Agent source:
+## Evidence files
 
-```text
-systems/pm-agent/
-```
+- `inputs/software-handoff-input.md`
+- `inputs/affiliate-handoff-input.md`
+- `outputs/software-handoff-transcript.md`
+- `outputs/affiliate-handoff-transcript.md`
+- `outputs/handoff-issues.md`
+- `test-report.md`
 
-PM Adapter profile:
+## Result
 
-```text
-agent-system/agents/software/pm-agent/
-```
+PASS at Paper level; implementation/external execution remained blocked.
 
-Simulation rule:
+## Limits / blockers
 
-- Do not modify `systems/pm-agent`.
-- PM Agent Adapter must respect existing PM Agent workflow, approval policy, verification-level policy, task packet/report rules.
-- Specialist handoff is proposed extension only.
-- All outputs here are Paper-level artifacts.
+- Old `systems/pm-agent/` references are historical; current active PM Agent is `agent-system/agents/software/pm-agent/`.
+- Implementation requires persistence decision, task packet, local preflight, and evidence.
+- Affiliate external actions require human approval.
 
-Folders:
+## Current note
 
-- `inputs/` fixed scenario prompts.
-- `outputs/` simulated handoff transcripts/reports.
+Specialist protocol/templates now exist in `agent-system/docs/` and `agent-system/templates/`.

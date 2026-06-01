@@ -1,22 +1,27 @@
 # Skill Validation Run: 2026-05-26
 
-Purpose: validate 7 reviewed skills adapted from `awesome-llm-apps` before creating agent profiles and `skills.json` mapping.
+## Purpose
 
-Scope:
+Historical Paper validation of seven adapted skills before initial profile/skills mapping.
 
-- Software mini flow:
-  - product-requirements
-  - project-planning
-  - frontend-react
-  - backend-api
-  - qa-verification
-- Affiliate mini flow:
-  - content-copywriting
-  - performance-analysis
+## Evidence files
 
-Folder policy:
+- `inputs/software-mini-flow-input.md`
+- `inputs/affiliate-mini-flow-input.md`
+- `outputs/software-mini-flow.md`
+- `outputs/affiliate-mini-flow.md`
+- `test-report.md`
 
-- `inputs/` contains fixed prompts/test data.
-- `outputs/` contains generated artifacts.
-- Keep this folder for comparison across future skill revisions.
-- Delete entire folder later if cleanup needed.
+## Result
+
+Software mini-flow PASS for artifact readiness but BLOCKED for implementation readiness. Affiliate mini-flow PASS for sample-data/draft-copy readiness but BLOCKED for strong business decisions.
+
+## Limits / blockers
+
+- No code implementation or external action.
+- Frontend/backend specs are artifact-level, not verified running code.
+- Affiliate sample too small for strong business recommendation.
+
+## Current note
+
+Initial agent profiles and `skills.json` mappings now exist; this folder remains comparison evidence.

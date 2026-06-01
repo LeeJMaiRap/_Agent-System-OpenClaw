@@ -1,49 +1,19 @@
 # PM Agent Skills
 
-Bộ skill lõi cho PM Agent, chia thành 4 nhóm chức năng.
+PM Agent local skill library. Skills are grouped by function and are referenced by PM Agent workflow/prompts; each leaf skill has its own `SKILL.md` and often templates/examples.
 
-## Cấu trúc
+## Current groups
 
-- `input-normalization/` — chuẩn hóa đầu vào thô.
-- `document-generation/` — sinh tài liệu PM chuẩn.
-- `project-operations/` — vận hành và cập nhật dự án.
-- `infrastructure/` — hạ tầng và xuất bản.
+- `document-generation/` — charter, requirements, plan, spec, risk register, rules, schedule, WBS generators.
+- `input-normalization/` — action item extraction, meeting notes normalization, requirement clarification.
+- `project-operations/` — changelog, daily report, issue log, lessons learned, status dashboard, task board.
+- `infrastructure/markdown-to-pdf/` — Markdown to PDF helper skill and script.
+- `voice/` — text-to-voice and voice-to-text workflow templates/references.
 
-## Skill boundary / Ranh giới skill
+## Boundary
 
-PM Agent skills trong folder này phục vụ PM/core operations:
-- intake and clarification;
-- document generation;
-- task board and project operation updates;
-- reporting and export support;
-- evidence and acceptance review.
+Skills produce PM artifacts or transformations. They do not independently approve scope, post externally, deploy, spend money, change secrets, or claim verification beyond available evidence.
 
-Các mô hình specialist team cũ đã được bỏ khỏi workspace hiện tại để thiết kế lại sau. File này không routing sang branch team/specialist-agent cũ.
+## Verification
 
-## Verification rule
-
-Khi skill tạo kết quả có claim về trạng thái (`tested`, `working`, `integrated`, `production-ready`, v.v.), skill phải tuân theo:
-
-```text
-agent-system/agents/software/pm-agent/runtime/policies/verification-level-policy.md
-```
-
-Tóm tắt:
-- `Paper` / `Simulated` chỉ chứng minh artifact hoặc reasoning.
-- `Local` cần command/test/log local.
-- `Integration` cần evidence nhiều phần hoạt động cùng nhau.
-- `Production` cần approval và production/staging evidence phù hợp.
-- Thiếu evidence thì mark `Needs Review` hoặc `Blocked`, không nâng lên `Done`.
-
-## Task templates
-
-Dùng các template này cho task broad, technical, risky, hoặc cần evidence rõ:
-
-```text
-agent-system/agents/software/pm-agent/templates/task-packet-template.md
-agent-system/agents/software/pm-agent/templates/task-report-template.md
-```
-
-## Danh sách skill
-
-Xem từng thư mục con để biết chi tiết.
+Generated artifacts must cite inputs/evidence level when making claims. PM Agent remains responsible for approval gates and final status claims.

@@ -1,45 +1,33 @@
 # Agent Profiles
 
-Agent profiles for `agent-system`. PM Agent is the active validated PM Agent integrated into Agent-System; the legacy PM adapter is archived under `software/pm-agent-adapter-legacy/`.
+This directory contains Agent-System specialist profiles. Each profile folder is expected to contain:
 
-## Profile Structure
+- `AGENT.md` — role/system instructions.
+- `skills.json` — mapped skills, handoff targets, safety metadata.
+- `README.md` — human-readable summary for that profile.
 
-Each agent folder contains:
+## Software agents
 
-- `AGENT.md` — role, boundaries, inputs, outputs, handoffs.
-- `skills.json` — mapped primary/supporting skills.
-- `README.md` — short purpose and lifecycle note.
+- `software/pm-agent/` — canonical integrated PM Agent.
+- `software/pm-agent-adapter-legacy/` — archived historical PM adapter only.
+- `software/product-agent/` — product requirements/MVP/user stories.
+- `software/architect-agent/` — architecture boundaries/ADRs/API-data notes.
+- `software/frontend-agent/` — frontend React/Next.js UI work.
+- `software/backend-agent/` — backend API/data/service work.
+- `software/qa-agent/` — QA verification and acceptance evidence.
 
-## Active Agents
+## Business / affiliate agents
 
-### Software Delivery
+- `business/business-pm-agent/` — affiliate/business PM orchestration.
+- `business/market-research-agent/` — market/niche/audience research.
+- `business/product-hunter-agent/` — product shortlist and claim boundaries.
+- `business/content-copy-agent/` — affiliate copy drafts.
+- `business/performance-analyst-agent/` — metrics review and iteration recommendations.
 
-| Agent | Folder | Primary Skill |
-|---|---|---|
-| PM Agent | `software/pm-agent/` | PM framework, project-planning, verification policies |
-| Product Agent | `software/product-agent/` | `software/product-requirements` |
-| Architect Agent | `software/architect-agent/` | `software/software-architecture` |
-| Frontend Agent | `software/frontend-agent/` | `software/frontend-react` |
-| Backend Agent | `software/backend-agent/` | `software/backend-api` |
-| QA Agent | `software/qa-agent/` | `software/qa-verification` |
+## Boundary
 
-### Business / Affiliate
-
-| Agent | Folder | Primary Skill |
-|---|---|---|
-| Business PM Agent | `business/business-pm-agent/` | `affiliate/affiliate-strategy` |
-| Market Research Agent | `business/market-research-agent/` | `affiliate/market-research` |
-| Product Hunter Agent | `business/product-hunter-agent/` | `affiliate/product-hunting` |
-| Content Copy Agent | `business/content-copy-agent/` | `affiliate/content-copywriting` |
-| Performance Analyst Agent | `business/performance-analyst-agent/` | `affiliate/performance-analysis` |
-
-## Role Boundary
-
-- PM Agent orchestrates; does not become frontend/backend/QA implementer.
-- Product Agent defines what/why; specialist agents define how.
-- QA Agent can block acceptance.
-- Affiliate agents create drafts/reports only; external actions need approval.
+Specialists do not independently post, purchase, deploy, spend money, change secrets, or take external state-changing actions. PM-led work uses Specialist Task Packet/Report discipline.
 
 ## Validation
 
-Validation artifacts live under `../tests/`, including skill validation, handoff simulations, affiliate/business simulations, and live read-only validation planning.
+Validation artifacts live under `../tests/`. Most profiles are draft/Paper-level or read-only validated, not production execution agents.
