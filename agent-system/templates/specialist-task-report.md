@@ -21,6 +21,15 @@ agent-system/agents/software/pm-agent/templates/task-report-template.md
 
 Short result summary.
 
+## Work Mode Gate Result
+
+- **Mode declared:** Validation / Campaign Preparation / Publish
+- **External action:** none / planned / approved
+- **Publish status:** not for publish / pending approval / approved
+- **Evidence level:** direct public fetch / manual evidence / mixed / synthetic
+- **Mode drift observed:** yes/no
+- **Stop gate triggered:** yes/no
+
 ## Scope Performed
 
 - What was done:
@@ -58,6 +67,12 @@ result summary
   - checklist:
 
 ## Claim Control
+
+Volatile marketplace facts checked same day or removed from publish-facing copy:
+
+```text
+- price / voucher / stock / shipping / rating / review count / sold count / variants
+```
 
 Unsupported claims removed/downgraded:
 

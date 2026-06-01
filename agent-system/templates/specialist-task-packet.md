@@ -47,6 +47,22 @@ Specialist must not do:
 - ...
 ```
 
+## Work Mode Gate
+
+Declare before execution:
+
+- **Mode:** Validation / Campaign Preparation / Publish
+- **External action:** none / planned / approved
+- **Publish status:** not for publish / pending approval / approved
+- **Evidence level:** direct public fetch / manual evidence / mixed / synthetic
+- **Mode approval source:** Doanh / Business PM / not required for Validation
+
+Rules:
+
+- Validation stops when test objective is proven and final report can be written.
+- Campaign Preparation needs explicit Business PM approval and stops before publish.
+- Publish needs separate approval with exact channel, copy, link/product, assets, timing, and represented actor.
+
 ## Scope
 
 ### Allowed files/folders
@@ -93,7 +109,10 @@ Specialist must not do:
 Stop and escalate if:
 
 - scope expands;
+- work mode is missing or no longer matches actual task;
 - forbidden action becomes necessary;
+- Validation starts becoming Campaign Preparation or Publish;
+- Campaign Preparation reaches publish point;
 - required tool/dependency is missing and no fallback is approved;
 - evidence cannot meet requested Verification Level;
 - role boundary conflict appears;

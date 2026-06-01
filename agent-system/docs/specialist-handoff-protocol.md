@@ -33,13 +33,17 @@ Before assigning specialist work, PM Agent must confirm:
 
 1. Task has clear objective.
 2. Task belongs to specialist role.
-3. Allowed files/folders are explicit.
-4. Forbidden actions are explicit.
-5. Verification Level is stated.
-6. Evidence required is stated.
-7. Preflight is required for Local/Integration/Production.
-8. Stop conditions are stated.
-9. Actor fields are filled using `agent-system/agents/software/pm-agent/runtime/policies/actor-tracking-policy.md`.
+3. Work Mode is declared: Validation / Campaign Preparation / Publish.
+4. External action status is declared: none / planned / approved.
+5. Publish status is declared: not for publish / pending approval / approved.
+6. Evidence level is declared: direct public fetch / manual evidence / mixed / synthetic.
+7. Allowed files/folders are explicit.
+8. Forbidden actions are explicit.
+9. Verification Level is stated.
+10. Evidence required is stated.
+11. Preflight is required for Local/Integration/Production.
+12. Stop conditions are stated.
+13. Actor fields are filled using `agent-system/agents/software/pm-agent/runtime/policies/actor-tracking-policy.md`.
 
 ## Verification Levels
 
@@ -137,6 +141,9 @@ Project-specific copies should live under project handoff/evidence path when act
 Stop and ask Doanh if:
 
 - scope expands;
+- Work Mode is missing;
+- Validation drifts into Campaign Preparation or Publish;
+- Campaign Preparation reaches publish point;
 - destructive action needed;
 - install/download/deploy/cloud/DNS/billing/secret needed;
 - external post/message/ads/payment/API write needed;
