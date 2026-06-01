@@ -1,0 +1,121 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 2220 >>
+stream
+BT /F1 10 Tf 50 800 Td 12 TL
+( Daily Project Report - PM Agent Framework) Tj T*
+(- Date: 2026-05-30) Tj T*
+(- Generated at: 02:14 UTC / 09:14 Asia/HoChiMinh) Tj T*
+(- Project ID: pm-agent-framework) Tj T*
+(- Project Status: active refinement) Tj T*
+(- Report Type: Daily Snapshot) Tj T*
+( Summary) Tj T*
+(PM Agent framework được chọn report vì agent-system/agents/software/pm-agent/STATUS.md xác nhận) Tj T*
+( Framework Reporting Decision) Tj T*
+(- Framework target: selected) Tj T*
+(- Reason: framework vẫn đang hardening core, chưa production-grade hoàn chỉnh) Tj T*
+(- Rule match: spec cho phép framework daily snapshot khi active refinement còn diễn ra) Tj T*
+(- Output: agent-system/agents/software/pm-agent/reports/daily/2026-05-30.md) Tj T*
+( Active Project Scan) Tj T*
+(- Primary scan path: projects/active/) Tj T*
+(- Fallback scan path: agent-system//projects/active/) Tj T*
+(- Scan result: no active project path/files found) Tj T*
+(- Candidates found: 0) Tj T*
+(- Eligible active projects: 0) Tj T*
+(- Eligible list: None) Tj T*
+(- Skipped projects: None) Tj T*
+(- Selector note: STATUS.md ghi rõ sau cleanup 2026-05-26 workspace chính hiện không có active p) Tj T*
+( Changes Today) Tj T*
+(Scoped git commits under PM Agent/project scope since 2026-05-30 00:00 UTC:) Tj T*
+(- None detected before report generation.) Tj T*
+(Working tree note before report generation:) Tj T*
+(- PM Agent path appears untracked as ?? agent-system/agents/software/pm-agent/ from repo root. ) Tj T*
+( Capability / Readiness Snapshot) Tj T*
+(- Framework files: 183) Tj T*
+(- Runtime files: 16) Tj T*
+(- Eval files: 17) Tj T*
+(- Policy files: 8) Tj T*
+(- Runbook files: 6) Tj T*
+(- Framework core readiness: ~85-90% per STATUS.md) Tj T*
+(- Controlled pilot readiness: ~80-85% per STATUS.md) Tj T*
+(- Production-grade readiness: chưa hoàn tất) Tj T*
+( Project Portfolio Note) Tj T*
+(- Không có active project folder trong projects/active/.) Tj T*
+(- Project mới nên dùng structure chuẩn trong STATUS.md:) Tj T*
+(text) Tj T*
+(projects/active/[project-name]/) Tj T*
+(├── project.yaml) Tj T*
+(├── 01-initiation/) Tj T*
+(├── 02-planning/) Tj T*
+(├── 03-execution/) Tj T*
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 1938 >>
+stream
+BT /F1 10 Tf 50 800 Td 12 TL
+(├── 04-monitoring/) Tj T*
+(├── 05-closure/) Tj T*
+(├── decisions/) Tj T*
+(├── approvals/) Tj T*
+(├── handoffs/) Tj T*
+(└── evidence/) Tj T*
+( Source Conflicts Detected) Tj T*
+(None detected in scanned sources.) Tj T*
+( Issues / Risks Needing Attention) Tj T*
+(- Framework vẫn chưa production-grade hoàn chỉnh; hardening framework core còn tiếp tục.) Tj T*
+(- Không có active project để validate daily project report selector trên project thực tế.) Tj T*
+(- projects/active/ không tồn tại; đây là expected state sau cleanup theo STATUS.md, không phải ) Tj T*
+( Decisions / Approvals Today) Tj T*
+(- None recorded in scanned sources.) Tj T*
+( Actor Attribution Summary) Tj T*
+(- Human activity: Không xác minh được từ source hiện tại.) Tj T*
+(- Main agent activity: chạy cron flow, đọc runbook/spec, scan selector, tạo framework report, e) Tj T*
+(- Subagent activity: None detected.) Tj T*
+(- Unknown / unverifiable: hoạt động ngoài git/source scan.) Tj T*
+( Next Actions) Tj T*
+(1. Tiếp tục giữ framework daily snapshot khi active refinement còn diễn ra.) Tj T*
+(2. Khi có project mới, tạo projects/active/[project-name]/project.yaml với status: active để se) Tj T*
+(3. Thiết kế lại team/delegation system sau khi foundation đủ ổn định và được duyệt.) Tj T*
+(4. Nếu Telegram delivery fail, giữ file-only fallback theo runbook.) Tj T*
+( Evidence / References) Tj T*
+(- agent-system/agents/software/pm-agent/STATUS.md) Tj T*
+(- agent-system/agents/software/pm-agent/runtime/runbooks/daily-report-cron.md) Tj T*
+(- agent-system/agents/software/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md) Tj T*
+( Git Scope Snapshot) Tj T*
+(- Scoped PM Agent/project commits detected today: 0) Tj T*
+(- Source conflict detected: 0) Tj T*
+(- Eligible active projects: 0) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 6 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R] /Count 2 >>
+endobj
+7 0 obj
+<< /Type /Catalog /Pages 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000002351 00000 n 
+0000002477 00000 n 
+0000004467 00000 n 
+0000004593 00000 n 
+0000004656 00000 n 
+trailer << /Size 8 /Root 7 0 R >>
+startxref
+4705
+%%EOF

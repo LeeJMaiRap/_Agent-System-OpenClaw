@@ -1,0 +1,336 @@
+# Agent-System Path Audit - 2026-05-29
+
+Matches: 330
+
+## Matches
+
+- `INDEX.md:3` — > Current integration rule (2026-05-29): OpenClaw remains workspace core. The one active PM Agent now lives inside Agent-System at `agent-system/agents/software/pm-agent/`. The previous PM Adapter is archived at `agent-system/agents/software/pm-agent-adapter-legacy/`. Historical mentions of `systems/pm-agent/` refer to the old backup source only.
+- `README.md:3` — > Current integration rule (2026-05-29): OpenClaw remains workspace core. The one active PM Agent now lives inside Agent-System at `agent-system/agents/software/pm-agent/`. The previous PM Adapter is archived at `agent-system/agents/software/pm-agent-adapter-legacy/`. Historical mentions of `systems/pm-agent/` refer to the old backup source only.
+- `STATUS.md:3` — > Current integration rule (2026-05-29): OpenClaw remains workspace core. The one active PM Agent now lives inside Agent-System at `agent-system/agents/software/pm-agent/`. The previous PM Adapter is archived at `agent-system/agents/software/pm-agent-adapter-legacy/`. Historical mentions of `systems/pm-agent/` refer to the old backup source only.
+- `agents/business/business-pm-agent/skills.json:19` — "canonical_pm_agent": "../../../systems/pm-agent",
+- `agents/business/content-copy-agent/AGENT.md:70` — 5. Escalate if task needs forbidden action or conflicts with canonical PM Agent in `systems/pm-agent`.
+- `agents/business/content-copy-agent/skills.json:27` — "canonical_pm_agent": "../../../systems/pm-agent",
+- `agents/business/market-research-agent/AGENT.md:77` — 5. Escalate if task needs forbidden action or conflicts with canonical PM Agent in `systems/pm-agent`.
+- `agents/business/market-research-agent/skills.json:35` — "canonical_pm_agent": "../../../systems/pm-agent",
+- `agents/business/performance-analyst-agent/AGENT.md:68` — 5. Escalate if task needs forbidden action or conflicts with canonical PM Agent in `systems/pm-agent`.
+- `agents/business/performance-analyst-agent/skills.json:27` — "canonical_pm_agent": "../../../systems/pm-agent",
+- `agents/business/product-hunter-agent/AGENT.md:83` — 5. Escalate if task needs forbidden action or conflicts with canonical PM Agent in `systems/pm-agent`.
+- `agents/business/product-hunter-agent/skills.json:38` — "canonical_pm_agent": "../../../systems/pm-agent",
+- `agents/software/architect-agent/AGENT.md:68` — 5. Escalate if task needs forbidden action or conflicts with canonical PM Agent in `systems/pm-agent`.
+- `agents/software/architect-agent/skills.json:20` — "canonical_pm_agent": "../../../systems/pm-agent",
+- `agents/software/backend-agent/AGENT.md:66` — 5. Escalate if task needs forbidden action or conflicts with canonical PM Agent in `systems/pm-agent`.
+- `agents/software/backend-agent/skills.json:27` — "canonical_pm_agent": "../../../systems/pm-agent",
+- `agents/software/frontend-agent/AGENT.md:66` — 5. Escalate if task needs forbidden action or conflicts with canonical PM Agent in `systems/pm-agent`.
+- `agents/software/frontend-agent/skills.json:27` — "canonical_pm_agent": "../../../systems/pm-agent",
+- `agents/software/pm-agent-adapter-legacy/AGENT.md:8` — systems/pm-agent/
+- `agents/software/pm-agent-adapter-legacy/AGENT.md:13` — Do not modify `systems/pm-agent` from this adapter unless Doanh explicitly approves.
+- `agents/software/pm-agent-adapter-legacy/AGENT.md:19` — - Source: `systems/pm-agent/architecture/SYSTEM-PROMPT.md`
+- `agents/software/pm-agent-adapter-legacy/AGENT.md:20` — - Workflow: `systems/pm-agent/architecture/WORKFLOW.md`
+- `agents/software/pm-agent-adapter-legacy/AGENT.md:21` — - Status: `systems/pm-agent/STATUS.md`
+- `agents/software/pm-agent-adapter-legacy/AGENT.md:31` — Inherited from `systems/pm-agent`:
+- `agents/software/pm-agent-adapter-legacy/AGENT.md:64` — - `systems/pm-agent/runtime/policies/verification-level-policy.md`
+- `agents/software/pm-agent-adapter-legacy/AGENT.md:65` — - `systems/pm-agent/runtime/policies/approval-policy.md`
+- `agents/software/pm-agent-adapter-legacy/AGENT.md:66` — - `systems/pm-agent/runtime/policies/acceptance-verification-policy.md`
+- `agents/software/pm-agent-adapter-legacy/AGENT.md:67` — - `systems/pm-agent/runtime/policies/actor-tracking-policy.md`
+- `agents/software/pm-agent-adapter-legacy/AGENT.md:68` — - `systems/pm-agent/runtime/policies/project-lifecycle-path-policy.md`
+- `agents/software/pm-agent-adapter-legacy/AGENT.md:94` — systems/pm-agent/templates/task-packet-template.md
+- `agents/software/pm-agent-adapter-legacy/AGENT.md:95` — systems/pm-agent/templates/task-report-template.md
+- `agents/software/pm-agent-adapter-legacy/README.md:10` — systems/pm-agent/
+- `agents/software/pm-agent-adapter-legacy/README.md:21` — - points to `systems/pm-agent` as source of truth;
+- `agents/software/pm-agent-adapter-legacy/README.md:37` — - Do not overwrite `systems/pm-agent`.
+- `agents/software/pm-agent-adapter-legacy/skills.json:3` — "canonical_agent": "systems/pm-agent",
+- `agents/software/pm-agent-adapter-legacy/skills.json:8` — "../../../systems/pm-agent/README.md",
+- `agents/software/pm-agent-adapter-legacy/skills.json:9` — "../../../systems/pm-agent/STATUS.md",
+- `agents/software/pm-agent-adapter-legacy/skills.json:10` — "../../../systems/pm-agent/architecture/SYSTEM-PROMPT.md",
+- `agents/software/pm-agent-adapter-legacy/skills.json:11` — "../../../systems/pm-agent/architecture/WORKFLOW.md",
+- `agents/software/pm-agent-adapter-legacy/skills.json:12` — "../../../systems/pm-agent/runtime/policies/verification-level-policy.md",
+- `agents/software/pm-agent-adapter-legacy/skills.json:13` — "../../../systems/pm-agent/runtime/policies/approval-policy.md"
+- `agents/software/pm-agent/AGENT-SYSTEM-INTEGRATION.md:26` — /data/.openclaw/workspace/systems/pm-agent/
+- `agents/software/pm-agent/AGENT-SYSTEM-INTEGRATION.md:26` — /data/.openclaw/workspace/systems/pm-agent/
+- `agents/software/pm-agent/AGENT-SYSTEM-INTEGRATION.md:26` — /data/.openclaw/workspace/systems/pm-agent/
+- `agents/software/pm-agent/README.md:23` — systems/pm-agent/
+- `agents/software/pm-agent/README.md:69` — systems/pm-agent/architecture/SYSTEM-PROMPT.md
+- `agents/software/pm-agent/README.md:70` — systems/pm-agent/architecture/WORKFLOW.md
+- `agents/software/pm-agent/README.md:129` — - Historical reports trong `systems/pm-agent/reports/` là audit trail; không sửa nếu không có lý do rõ.
+- `agents/software/pm-agent/architecture/SYSTEM-PROMPT.md:79` — systems/pm-agent/runtime/policies/verification-level-policy.md
+- `agents/software/pm-agent/architecture/SYSTEM-PROMPT.md:118` — systems/pm-agent/templates/task-packet-template.md
+- `agents/software/pm-agent/architecture/SYSTEM-PROMPT.md:138` — systems/pm-agent/templates/task-report-template.md
+- `agents/software/pm-agent/architecture/WORKFLOW.md:90` — systems/pm-agent/runtime/policies/verification-level-policy.md
+- `agents/software/pm-agent/architecture/WORKFLOW.md:220` — Project source of truth remains inside the project folder. Memory/state logs support continuity; they do not replace project artifacts.
+- `agents/software/pm-agent/eval/reports/regression-pack-v1-2026-05-15.md:12` — 1. `systems/pm-agent/eval/scenarios/vague-requirement.md`
+- `agents/software/pm-agent/eval/reports/regression-pack-v1-2026-05-15.md:13` — 2. `systems/pm-agent/eval/scenarios/scope-change.md`
+- `agents/software/pm-agent/eval/reports/regression-pack-v1-2026-05-15.md:14` — 3. `systems/pm-agent/eval/scenarios/worker-failure.md`
+- `agents/software/pm-agent/eval/reports/regression-pack-v1-2026-05-15.md:15` — 4. `systems/pm-agent/eval/scenarios/missing-approval.md`
+- `agents/software/pm-agent/eval/reports/regression-pack-v1-2026-05-15.md:16` — 5. `systems/pm-agent/eval/scenarios/stale-project.md`
+- `agents/software/pm-agent/eval/reports/regression-pack-v1-2026-05-15.md:17` — 6. `systems/pm-agent/eval/scenarios/false-done.md`
+- `agents/software/pm-agent/eval/reports/regression-pack-v1-2026-05-15.md:20` — 7. `systems/pm-agent/eval/scenarios/source-conflict.md`
+- `agents/software/pm-agent/eval/reports/regression-pack-v1-2026-05-15.md:21` — 8. `systems/pm-agent/eval/scenarios/on-hold-in-active-path.md`
+- `agents/software/pm-agent/eval/reports/regression-pack-v1-2026-05-15.md:22` — 9. `systems/pm-agent/eval/scenarios/no-change-day.md`
+- `agents/software/pm-agent/eval/reports/regression-pack-v1-2026-05-15.md:23` — 10. `systems/pm-agent/eval/scenarios/missing-actor.md`
+- `agents/software/pm-agent/eval/reports/regression-pack-v1-2026-05-15.md:41` — 3. Check các mục tương ứng trong `systems/pm-agent/eval/checklists/regression-pack-checklist.md`
+- `agents/software/pm-agent/reports/daily/2026-05-14.md:14` — 1. Reporting / actor-tracking / readiness artifacts tiếp tục được cập nhật trong `systems/pm-agent/`.
+- `agents/software/pm-agent/reports/daily/2026-05-14.md:55` — - `systems/pm-agent/runtime/runbooks/daily-report-cron.md`
+- `agents/software/pm-agent/reports/daily/2026-05-14.md:56` — - `systems/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`
+- `agents/software/pm-agent/reports/daily/2026-05-14.md:57` — - `systems/pm-agent/reports/plans/daily-reporting-structure-notes-2026-05-14.md`
+- `agents/software/pm-agent/reports/daily/2026-05-14.md:58` — - `systems/pm-agent/STATUS.md`
+- `agents/software/pm-agent/reports/daily/2026-05-14.md:69` — - Không phát hiện conflict nội dung nghiêm trọng giữa `systems/pm-agent/STATUS.md` và runbook/spec đã đọc.
+- `agents/software/pm-agent/reports/daily/2026-05-15-cron-log.md:11` — - Read runbook: `systems/pm-agent/runtime/runbooks/daily-report-cron.md`
+- `agents/software/pm-agent/reports/daily/2026-05-15-cron-log.md:12` — - Read spec: `systems/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`
+- `agents/software/pm-agent/reports/daily/2026-05-15-cron-log.md:13` — - Generated: `systems/pm-agent/reports/daily/2026-05-15.md`
+- `agents/software/pm-agent/reports/daily/2026-05-15-cron-log.md:26` — - Input: `systems/pm-agent/reports/daily/2026-05-15.md`
+- `agents/software/pm-agent/reports/daily/2026-05-15-cron-log.md:27` — - Output: `systems/pm-agent/reports/daily/2026-05-15.pdf`
+- `agents/software/pm-agent/reports/daily/2026-05-15-cron-log.md:48` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-15.md` (4020 bytes)
+- `agents/software/pm-agent/reports/daily/2026-05-15-cron-log.md:48` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-15.md` (4020 bytes)
+- `agents/software/pm-agent/reports/daily/2026-05-15-cron-log.md:49` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-15.pdf` (14530 bytes)
+- `agents/software/pm-agent/reports/daily/2026-05-15-cron-log.md:49` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-15.pdf` (14530 bytes)
+- `agents/software/pm-agent/reports/daily/2026-05-15.md:47` — - `systems/pm-agent/STATUS.md`
+- `agents/software/pm-agent/reports/daily/2026-05-15.md:48` — - `systems/pm-agent/runtime/`
+- `agents/software/pm-agent/reports/daily/2026-05-15.md:49` — - `systems/pm-agent/eval/`
+- `agents/software/pm-agent/reports/daily/2026-05-15.md:50` — - `systems/pm-agent/skills/`
+- `agents/software/pm-agent/reports/daily/2026-05-15.md:51` — - `systems/pm-agent/reports/daily/`
+- `agents/software/pm-agent/reports/daily/2026-05-16-cron-log.md:11` — - Read runbook: `systems/pm-agent/runtime/runbooks/daily-report-cron.md`
+- `agents/software/pm-agent/reports/daily/2026-05-16-cron-log.md:12` — - Read spec: `systems/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`
+- `agents/software/pm-agent/reports/daily/2026-05-16-cron-log.md:13` — - Generated: `systems/pm-agent/reports/daily/2026-05-16.md`
+- `agents/software/pm-agent/reports/daily/2026-05-16-cron-log.md:24` — - Input: `systems/pm-agent/reports/daily/2026-05-16.md`
+- `agents/software/pm-agent/reports/daily/2026-05-16-cron-log.md:25` — - Output: `systems/pm-agent/reports/daily/2026-05-16.pdf`
+- `agents/software/pm-agent/reports/daily/2026-05-16-cron-log.md:40` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-16.md`
+- `agents/software/pm-agent/reports/daily/2026-05-16-cron-log.md:40` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-16.md`
+- `agents/software/pm-agent/reports/daily/2026-05-16-cron-log.md:41` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-16.pdf`
+- `agents/software/pm-agent/reports/daily/2026-05-16-cron-log.md:41` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-16.pdf`
+- `agents/software/pm-agent/reports/daily/2026-05-16.md:47` — - `systems/pm-agent/STATUS.md`
+- `agents/software/pm-agent/reports/daily/2026-05-16.md:48` — - `systems/pm-agent/runtime/`
+- `agents/software/pm-agent/reports/daily/2026-05-16.md:49` — - `systems/pm-agent/eval/`
+- `agents/software/pm-agent/reports/daily/2026-05-16.md:50` — - `systems/pm-agent/skills/`
+- `agents/software/pm-agent/reports/daily/2026-05-16.md:51` — - `systems/pm-agent/reports/daily/2026-05-15.md`
+- `agents/software/pm-agent/reports/daily/2026-05-16.md:52` — - `systems/pm-agent/reports/daily/2026-05-15-cron-log.md`
+- `agents/software/pm-agent/reports/daily/2026-05-18-cron-log.md:12` — - Read runbook: `systems/pm-agent/runtime/runbooks/daily-report-cron.md`
+- `agents/software/pm-agent/reports/daily/2026-05-18-cron-log.md:13` — - Read spec: `systems/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`
+- `agents/software/pm-agent/reports/daily/2026-05-18-cron-log.md:14` — - Checked framework state from: `systems/pm-agent/STATUS.md`
+- `agents/software/pm-agent/reports/daily/2026-05-18-cron-log.md:16` — - Generated: `systems/pm-agent/reports/daily/2026-05-18.md`
+- `agents/software/pm-agent/reports/daily/2026-05-18-cron-log.md:26` — - Input: `systems/pm-agent/reports/daily/2026-05-18.md`
+- `agents/software/pm-agent/reports/daily/2026-05-18-cron-log.md:27` — - Output: `systems/pm-agent/reports/daily/2026-05-18.pdf`
+- `agents/software/pm-agent/reports/daily/2026-05-18-cron-log.md:49` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-18.md`
+- `agents/software/pm-agent/reports/daily/2026-05-18-cron-log.md:49` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-18.md`
+- `agents/software/pm-agent/reports/daily/2026-05-18-cron-log.md:50` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-18.pdf`
+- `agents/software/pm-agent/reports/daily/2026-05-18-cron-log.md:50` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-18.pdf`
+- `agents/software/pm-agent/reports/daily/2026-05-18.md:26` — - Không phát hiện commit mới dưới `systems/pm-agent` hoặc `projects/active` trong khoảng quét cho ngày 2026-05-18
+- `agents/software/pm-agent/reports/daily/2026-05-18.md:69` — - `systems/pm-agent/STATUS.md`
+- `agents/software/pm-agent/reports/daily/2026-05-18.md:70` — - `systems/pm-agent/runtime/runbooks/daily-report-cron.md`
+- `agents/software/pm-agent/reports/daily/2026-05-18.md:71` — - `systems/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`
+- `agents/software/pm-agent/reports/daily/2026-05-18.md:73` — - `systems/pm-agent/reports/daily/2026-05-16.md`
+- `agents/software/pm-agent/reports/daily/2026-05-18.md:74` — - `systems/pm-agent/reports/daily/2026-05-16-cron-log.md`
+- `agents/software/pm-agent/reports/daily/2026-05-19-cron-log.md:12` — - Read runbook: `systems/pm-agent/runtime/runbooks/daily-report-cron.md`
+- `agents/software/pm-agent/reports/daily/2026-05-19-cron-log.md:13` — - Read spec: `systems/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`
+- `agents/software/pm-agent/reports/daily/2026-05-19-cron-log.md:14` — - Checked framework state from: `systems/pm-agent/STATUS.md`
+- `agents/software/pm-agent/reports/daily/2026-05-19-cron-log.md:16` — - Generated: `systems/pm-agent/reports/daily/2026-05-19.md`
+- `agents/software/pm-agent/reports/daily/2026-05-19-cron-log.md:26` — - Input: `systems/pm-agent/reports/daily/2026-05-19.md`
+- `agents/software/pm-agent/reports/daily/2026-05-19-cron-log.md:27` — - Output: `systems/pm-agent/reports/daily/2026-05-19.pdf`
+- `agents/software/pm-agent/reports/daily/2026-05-19-cron-log.md:51` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-19.md`
+- `agents/software/pm-agent/reports/daily/2026-05-19-cron-log.md:51` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-19.md`
+- `agents/software/pm-agent/reports/daily/2026-05-19-cron-log.md:52` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-19.pdf`
+- `agents/software/pm-agent/reports/daily/2026-05-19-cron-log.md:52` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-19.pdf`
+- `agents/software/pm-agent/reports/daily/2026-05-19-cron-log.md:53` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-19-cron-log.md`
+- `agents/software/pm-agent/reports/daily/2026-05-19-cron-log.md:53` — - `/root/.openclaw/workspace/systems/pm-agent/reports/daily/2026-05-19-cron-log.md`
+- `agents/software/pm-agent/reports/daily/2026-05-19.md:10` — PM Agent framework vẫn được chọn report vì `systems/pm-agent/STATUS.md` xác nhận framework đang ở giai đoạn `Evaluation / Refinement after first real project validation` / hardening. Hôm nay có 1 project trong `projects/active/` đủ điều kiện report selector: `web-ban-acc-game` với `status: active`.
+- `agents/software/pm-agent/reports/daily/2026-05-19.md:16` — - **Output:** `systems/pm-agent/reports/daily/2026-05-19.md`
+- `agents/software/pm-agent/reports/daily/2026-05-19.md:27` — Scoped git commits under `systems/pm-agent` / `projects/active` since 2026-05-19 00:00:
+- `agents/software/pm-agent/reports/daily/2026-05-19.md:74` — - `systems/pm-agent/STATUS.md`
+- `agents/software/pm-agent/reports/daily/2026-05-19.md:75` — - `systems/pm-agent/runtime/runbooks/daily-report-cron.md`
+- `agents/software/pm-agent/reports/daily/2026-05-19.md:76` — - `systems/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`
+- `agents/software/pm-agent/reports/daily/2026-05-19.md:78` — - `systems/pm-agent/reports/daily/2026-05-18.md`
+- `agents/software/pm-agent/reports/daily/2026-05-19.md:79` — - `systems/pm-agent/reports/daily/2026-05-18-cron-log.md`
+- `agents/software/pm-agent/reports/daily/2026-05-26-cron-log.md:6` — - **Primary artifact:** `systems/pm-agent/reports/daily/2026-05-26.md`
+- `agents/software/pm-agent/reports/daily/2026-05-26-cron-log.md:7` — - **PDF artifact:** `systems/pm-agent/reports/daily/2026-05-26.pdf`
+- `agents/software/pm-agent/reports/daily/2026-05-26-cron-log.md:14` — - `systems/pm-agent/runtime/runbooks/daily-report-cron.md`
+- `agents/software/pm-agent/reports/daily/2026-05-26-cron-log.md:15` — - `systems/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`
+- `agents/software/pm-agent/reports/daily/2026-05-26-cron-log.md:17` — - Source: `systems/pm-agent/STATUS.md`
+- `agents/software/pm-agent/reports/daily/2026-05-26-cron-log.md:24` — - Output: `systems/pm-agent/reports/daily/2026-05-26.md`
+- `agents/software/pm-agent/reports/daily/2026-05-26-cron-log.md:28` — - Output: `systems/pm-agent/reports/daily/2026-05-26.pdf`
+- `agents/software/pm-agent/reports/daily/2026-05-26-cron-log.md:37` — - **Reason:** `systems/pm-agent/STATUS.md` says PM Agent is in `Evaluation / Refinement after first real project validation` and hardening remains active.
+- `agents/software/pm-agent/reports/daily/2026-05-26-cron-log.md:59` — - `systems/pm-agent/reports/daily/2026-05-26.md`
+- `agents/software/pm-agent/reports/daily/2026-05-26-cron-log.md:60` — - `systems/pm-agent/reports/daily/2026-05-26.pdf`
+- `agents/software/pm-agent/reports/daily/2026-05-26-cron-log.md:61` — - `systems/pm-agent/reports/daily/2026-05-26-cron-log.md`
+- `agents/software/pm-agent/reports/daily/2026-05-26.md:10` — PM Agent framework vẫn được chọn report vì `systems/pm-agent/STATUS.md` xác nhận framework đang ở giai đoạn `Evaluation / Refinement after first real project validation` / hardening. Hôm nay selector tìm thấy 1 project trong `projects/active/` đủ điều kiện: `web-ban-acc-game` với `status: active`.
+- `agents/software/pm-agent/reports/daily/2026-05-26.md:16` — - **Output:** `systems/pm-agent/reports/daily/2026-05-26.md`
+- `agents/software/pm-agent/reports/daily/2026-05-26.md:27` — Scoped git commits under `systems/pm-agent` / `projects/active` since 2026-05-26 00:00 UTC:
+- `agents/software/pm-agent/reports/daily/2026-05-26.md:31` — - No modified tracked files detected under `systems/pm-agent` / `projects/active` before report generation.
+- `agents/software/pm-agent/reports/daily/2026-05-26.md:83` — - `systems/pm-agent/STATUS.md`
+- `agents/software/pm-agent/reports/daily/2026-05-26.md:84` — - `systems/pm-agent/runtime/runbooks/daily-report-cron.md`
+- `agents/software/pm-agent/reports/daily/2026-05-26.md:85` — - `systems/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`
+- `agents/software/pm-agent/reports/daily/2026-05-27-cron-log.md:5` — - **Runbook:** `systems/pm-agent/runtime/runbooks/daily-report-cron.md`
+- `agents/software/pm-agent/reports/daily/2026-05-27-cron-log.md:6` — - **Spec:** `systems/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`
+- `agents/software/pm-agent/reports/daily/2026-05-27-cron-log.md:15` — | Generate/update framework report | completed | `systems/pm-agent/reports/daily/2026-05-27.md` |
+- `agents/software/pm-agent/reports/daily/2026-05-27-cron-log.md:18` — | Export PDF | completed | `systems/pm-agent/reports/daily/2026-05-27.pdf` |
+- `agents/software/pm-agent/reports/daily/2026-05-27-cron-log.md:24` — - **Reason:** `systems/pm-agent/STATUS.md` says framework is in hardening / active refinement and not production-grade complete.
+- `agents/software/pm-agent/reports/daily/2026-05-27-cron-log.md:34` — - `systems/pm-agent/reports/daily/2026-05-27.md`
+- `agents/software/pm-agent/reports/daily/2026-05-27-cron-log.md:35` — - `systems/pm-agent/reports/daily/2026-05-27.pdf`
+- `agents/software/pm-agent/reports/daily/2026-05-27-cron-log.md:36` — - `systems/pm-agent/reports/daily/2026-05-27-cron-log.md`
+- `agents/software/pm-agent/reports/daily/2026-05-27-cron-log.md:43` — 1. Add stable `systems/pm-agent/scripts/md_to_pdf.py` or install/use a markdown-to-pdf skill for repeatable PDF export.
+- `agents/software/pm-agent/reports/daily/2026-05-27.md:10` — PM Agent framework được chọn report vì `systems/pm-agent/STATUS.md` xác nhận framework đang ở giai đoạn hardening / active refinement sau cleanup workspace. Không tìm thấy thư mục `projects/active/`, nên không có active project report hôm nay.
+- `agents/software/pm-agent/reports/daily/2026-05-27.md:16` — - **Output:** `systems/pm-agent/reports/daily/2026-05-27.md`
+- `agents/software/pm-agent/reports/daily/2026-05-27.md:25` — - **Selector note:** `systems/pm-agent/STATUS.md` ghi rõ sau cleanup 2026-05-26 workspace chính hiện không có active project folder trong `projects/active/`.
+- `agents/software/pm-agent/reports/daily/2026-05-27.md:28` — Scoped git commits under `systems/pm-agent` / `projects` since 2026-05-27 00:00 UTC:
+- `agents/software/pm-agent/reports/daily/2026-05-27.md:32` — - No modified tracked files detected under `systems/pm-agent` / `projects` before report generation.
+- `agents/software/pm-agent/reports/daily/2026-05-27.md:46` — - Project mới nên dùng structure chuẩn trong `systems/pm-agent/STATUS.md` và `systems/pm-agent/README.md`.
+- `agents/software/pm-agent/reports/daily/2026-05-27.md:72` — - `systems/pm-agent/STATUS.md`
+- `agents/software/pm-agent/reports/daily/2026-05-27.md:73` — - `systems/pm-agent/README.md`
+- `agents/software/pm-agent/reports/daily/2026-05-27.md:74` — - `systems/pm-agent/runtime/runbooks/daily-report-cron.md`
+- `agents/software/pm-agent/reports/daily/2026-05-27.md:75` — - `systems/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`
+- `agents/software/pm-agent/reports/daily/2026-05-29-cron-log.md:5` — - **Runbook:** `systems/pm-agent/runtime/runbooks/daily-report-cron.md`
+- `agents/software/pm-agent/reports/daily/2026-05-29-cron-log.md:6` — - **Spec:** `systems/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`
+- `agents/software/pm-agent/reports/daily/2026-05-29-cron-log.md:15` — | Generate/update framework report | completed | `systems/pm-agent/reports/daily/2026-05-29.md` |
+- `agents/software/pm-agent/reports/daily/2026-05-29-cron-log.md:18` — | Export PDF | completed | `systems/pm-agent/reports/daily/2026-05-29.pdf` |
+- `agents/software/pm-agent/reports/daily/2026-05-29-cron-log.md:24` — - **Reason:** `systems/pm-agent/STATUS.md` says framework is in hardening / active refinement and not production-grade complete.
+- `agents/software/pm-agent/reports/daily/2026-05-29-cron-log.md:34` — - `systems/pm-agent/reports/daily/2026-05-29.md`
+- `agents/software/pm-agent/reports/daily/2026-05-29-cron-log.md:35` — - `systems/pm-agent/reports/daily/2026-05-29.pdf`
+- `agents/software/pm-agent/reports/daily/2026-05-29-cron-log.md:36` — - `systems/pm-agent/reports/daily/2026-05-29-cron-log.md`
+- `agents/software/pm-agent/reports/daily/2026-05-29.md:10` — PM Agent framework được chọn report vì `systems/pm-agent/STATUS.md` xác nhận framework vẫn đang hardening / active refinement và chưa production-grade hoàn chỉnh. Không tìm thấy thư mục `projects/active/`, nên không có active project report hôm nay.
+- `agents/software/pm-agent/reports/daily/2026-05-29.md:16` — - **Output:** `systems/pm-agent/reports/daily/2026-05-29.md`
+- `agents/software/pm-agent/reports/daily/2026-05-29.md:25` — - **Selector note:** `systems/pm-agent/STATUS.md` ghi rõ sau cleanup 2026-05-26 workspace chính hiện không có active project folder trong `projects/active/`.
+- `agents/software/pm-agent/reports/daily/2026-05-29.md:28` — Scoped git commits under `systems/pm-agent` / `projects` since 2026-05-29 00:00 UTC:
+- `agents/software/pm-agent/reports/daily/2026-05-29.md:46` — - Project mới nên dùng structure chuẩn trong `systems/pm-agent/STATUS.md` và `systems/pm-agent/README.md`.
+- `agents/software/pm-agent/reports/daily/2026-05-29.md:72` — - `systems/pm-agent/STATUS.md`
+- `agents/software/pm-agent/reports/daily/2026-05-29.md:73` — - `systems/pm-agent/README.md`
+- `agents/software/pm-agent/reports/daily/2026-05-29.md:74` — - `systems/pm-agent/runtime/runbooks/daily-report-cron.md`
+- `agents/software/pm-agent/reports/daily/2026-05-29.md:75` — - `systems/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`
+- `agents/software/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md:10` — **Path:** `systems/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`
+- `agents/software/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md:85` — `systems/pm-agent/reports/daily/YYYY-MM-DD.md`
+- `agents/software/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md:90` — - có thay đổi liên quan `systems/pm-agent/` trong ngày
+- `agents/software/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md:231` — - framework mode mà thiếu `systems/pm-agent/STATUS.md`
+- `agents/software/pm-agent/reports/plans/daily-reporting-structure-notes-2026-05-14.md:6` — - Path: `systems/pm-agent/reports/daily/YYYY-MM-DD.md`
+- `agents/software/pm-agent/reports/plans/daily-reporting-structure-notes-2026-05-14.md:26` — - Framework report → `systems/pm-agent/STATUS.md`, runtime, eval, skills, git log
+- `agents/software/pm-agent/reports/plans/update-pma-final-report-2026-05-15.md:301` — systems/pm-agent/
+- `agents/software/pm-agent/reports/plans/update-pma-plan-2026-05-14.md:3` — - **Scope:** Đợt nâng cấp production-readiness cho chính `systems/pm-agent/`
+- `agents/software/pm-agent/reports/plans/update-pma-plan-2026-05-14.md:11` — **Path:** `systems/pm-agent/reports/plans/update-pma-plan-2026-05-14.md`
+- `agents/software/pm-agent/reports/plans/update-pma-plan-2026-05-14.md:18` — 5. `systems/pm-agent/reports/plans/` phù hợp cho các kế hoạch vận hành / nâng cấp / đợt cải tiến của framework
+- `agents/software/pm-agent/reports/plans/update-pma-plan-2026-05-14.md:115` — - policy file cho actor tracking trong `systems/pm-agent/runtime/policies/`
+- `agents/software/pm-agent/reports/plans/update-pma-plan-2026-05-14.md:156` — - `systems/pm-agent/eval/checklists/production-readiness-checklist.md` phản ánh đúng trạng thái thật
+- `agents/software/pm-agent/reports/plans/update-pma-plan-2026-05-14.md:177` — - [x] Bổ sung framework-report mode cho `systems/pm-agent/`
+- `agents/software/pm-agent/reports/portfolio/README.md:25` — - `systems/pm-agent/reports/portfolio/active-projects-dashboard.md`
+- `agents/software/pm-agent/reports/portfolio/README.md:39` — - `systems/pm-agent/reports/portfolio/on-hold-projects-dashboard.md`
+- `agents/software/pm-agent/reports/portfolio/README.md:52` — - `systems/pm-agent/reports/portfolio/stopped-projects-dashboard.md`
+- `agents/software/pm-agent/reports/portfolio/README.md:66` — - `systems/pm-agent/reports/portfolio/archived-projects-dashboard.md`
+- `agents/software/pm-agent/reports/portfolio/README.md:73` — `systems/pm-agent/reports/portfolio/portfolio-summary.md`
+- `agents/software/pm-agent/runtime/policies/actor-tracking-policy.md:137` — Khi report cho chính `systems/pm-agent/`:
+- `agents/software/pm-agent/runtime/policies/daily-reporting-structure-policy.md:19` — Dùng khi report cho chính hệ `systems/pm-agent/`.
+- `agents/software/pm-agent/runtime/policies/daily-reporting-structure-policy.md:22` — `systems/pm-agent/reports/daily/YYYY-MM-DD.md`
+- `agents/software/pm-agent/runtime/policies/daily-reporting-structure-policy.md:58` — - `systems/pm-agent/reports/daily/`
+- `agents/software/pm-agent/runtime/policies/daily-reporting-structure-policy.md:96` — 1. `systems/pm-agent/STATUS.md`
+- `agents/software/pm-agent/runtime/policies/daily-reporting-structure-policy.md:97` — 2. `systems/pm-agent/runtime/`
+- `agents/software/pm-agent/runtime/policies/daily-reporting-structure-policy.md:98` — 3. `systems/pm-agent/eval/`
+- `agents/software/pm-agent/runtime/policies/daily-reporting-structure-policy.md:99` — 4. `systems/pm-agent/skills/`
+- `agents/software/pm-agent/runtime/policies/daily-reporting-structure-policy.md:151` — - nếu project active nhưng không có meaningful update quá lâu, phải xem xét stale detection theo `systems/pm-agent/runtime/policies/stale-project-detection-policy.md`
+- `agents/software/pm-agent/runtime/policies/project-lifecycle-path-policy.md:207` — - Framework daily report: `systems/pm-agent/reports/daily/YYYY-MM-DD.md`
+- `agents/software/pm-agent/runtime/runbooks/closure-checklist.md:32` — Không đóng project nếu chưa có final report, closure approval, và acceptance verification tối thiểu theo `systems/pm-agent/runtime/policies/acceptance-verification-policy.md`.
+- `agents/software/pm-agent/runtime/runbooks/daily-report-cron.md:24` — 10. **Create cron run log** in `systems/pm-agent/reports/daily/YYYY-MM-DD-cron-log.md` with:
+- `agents/software/pm-agent/runtime/runbooks/daily-report-cron.md:34` — `systems/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`
+- `agents/software/pm-agent/runtime/runbooks/daily-report-cron.md:74` — - `systems/pm-agent/reports/daily/YYYY-MM-DD-cron-log.md` exists
+- `agents/software/pm-agent/skills/README.md:28` — systems/pm-agent/runtime/policies/verification-level-policy.md
+- `agents/software/pm-agent/skills/README.md:43` — systems/pm-agent/templates/task-packet-template.md
+- `agents/software/pm-agent/skills/README.md:44` — systems/pm-agent/templates/task-report-template.md
+- `agents/software/pm-agent/skills/document-generation/project-charter-generator/SKILL.md:72` — Output phải tuân thủ template có sẵn trong `systems/pm-agent/templates/charter-template.md`.
+- `agents/software/pm-agent/skills/document-generation/project-charter-generator/SKILL.md:195` — - Tham khảo: `systems/pm-agent/templates/charter-template.md`
+- `agents/software/pm-agent/skills/document-generation/project-plan-generator/SKILL.md:67` — Output phải bám sát template trong `systems/pm-agent/templates/plan-template.md`, và có thể bổ sung phần `Risk Mitigation` / `Success Criteria` khi đầu vào đủ dữ liệu.
+- `agents/software/pm-agent/skills/document-generation/project-plan-generator/SKILL.md:188` — - Tham khảo: `systems/pm-agent/templates/plan-template.md`
+- `agents/software/pm-agent/skills/document-generation/project-spec-generator/SKILL.md:68` — Output phải tuân thủ template có sẵn trong `systems/pm-agent/templates/spec-template.md`.
+- `agents/software/pm-agent/skills/document-generation/project-spec-generator/SKILL.md:265` — - Tham khảo: `systems/pm-agent/templates/spec-template.md`
+- `agents/software/pm-agent/skills/document-generation/requirements-document-generator/SKILL.md:64` — Output phải tuân thủ template có sẵn trong `systems/pm-agent/templates/requirements-template.md`.
+- `agents/software/pm-agent/skills/document-generation/requirements-document-generator/SKILL.md:192` — - Tham khảo: `systems/pm-agent/templates/requirements-template.md`
+- `agents/software/pm-agent/skills/document-generation/risk-register-generator/SKILL.md:61` — Output phải bám theo `systems/pm-agent/templates/risk-register-template.md`.
+- `agents/software/pm-agent/skills/document-generation/risk-register-generator/SKILL.md:180` — - Tham khảo: `systems/pm-agent/templates/risk-register-template.md`
+- `agents/software/pm-agent/skills/document-generation/rules-generator/SKILL.md:72` — Output phải bám theo `systems/pm-agent/templates/rules-template.md`, và được phép mở rộng khi dự án cần rule cụ thể hơn.
+- `agents/software/pm-agent/skills/document-generation/rules-generator/SKILL.md:185` — - Tham khảo: `systems/pm-agent/templates/rules-template.md`
+- `agents/software/pm-agent/skills/document-generation/schedule-generator/SKILL.md:63` — Output phải bám theo `systems/pm-agent/templates/schedule-template.md`.
+- `agents/software/pm-agent/skills/document-generation/schedule-generator/SKILL.md:183` — - Tham khảo: `systems/pm-agent/templates/schedule-template.md`
+- `agents/software/pm-agent/skills/document-generation/wbs-generator/SKILL.md:73` — Output phải bám theo `systems/pm-agent/templates/wbs-template.md`.
+- `agents/software/pm-agent/skills/document-generation/wbs-generator/SKILL.md:199` — - Tham khảo: `systems/pm-agent/templates/wbs-template.md`
+- `agents/software/pm-agent/skills/input-normalization/meeting-notes-normalizer/template-input.md:51` — - Cần rà lại systems/pm-agent trước
+- `agents/software/pm-agent/skills/project-operations/change-log-updater/SKILL.md:62` — Output phải bám theo `systems/pm-agent/templates/change-log-template.md`.
+- `agents/software/pm-agent/skills/project-operations/change-log-updater/SKILL.md:182` — - Tham khảo: `systems/pm-agent/templates/change-log-template.md`
+- `agents/software/pm-agent/skills/project-operations/daily-project-report-generator/SKILL.md:3` — description: Tạo file báo cáo hằng ngày cho một project hoặc cho chính PM Agent framework vào cuối ngày hoặc theo lịch định kỳ; dùng khi cần snapshot thay đổi trong ngày, ai đã làm gì (human / agent / subagent), tiến độ, issue/risk chính và next actions. Output mặc định vào `projects/active/[project-name]/reports/daily/YYYY-MM-DD.md` hoặc `systems/pm-agent/reports/daily/YYYY-MM-DD.md` tùy mode.
+- `agents/software/pm-agent/skills/project-operations/daily-project-report-generator/SKILL.md:53` — Dùng cho chính `systems/pm-agent/`.
+- `agents/software/pm-agent/skills/project-operations/daily-project-report-generator/SKILL.md:56` — - `systems/pm-agent/STATUS.md`
+- `agents/software/pm-agent/skills/project-operations/daily-project-report-generator/SKILL.md:57` — - `systems/pm-agent/runtime/`
+- `agents/software/pm-agent/skills/project-operations/daily-project-report-generator/SKILL.md:58` — - `systems/pm-agent/eval/`
+- `agents/software/pm-agent/skills/project-operations/daily-project-report-generator/SKILL.md:59` — - `systems/pm-agent/skills/`
+- `agents/software/pm-agent/skills/project-operations/daily-project-report-generator/SKILL.md:64` — `systems/pm-agent/reports/daily/YYYY-MM-DD.md`
+- `agents/software/pm-agent/skills/project-operations/daily-project-report-generator/SKILL.md:69` — `systems/pm-agent/runtime/policies/daily-reporting-structure-policy.md`
+- `agents/software/pm-agent/skills/project-operations/daily-project-report-generator/SKILL.md:166` — - `systems/pm-agent/runtime/policies/daily-reporting-structure-policy.md` - policy cấu trúc daily reporting
+- `agents/software/pm-agent/skills/project-operations/issue-log-updater/SKILL.md:63` — Output phải bám theo `systems/pm-agent/templates/issue-log-template.md`.
+- `agents/software/pm-agent/skills/project-operations/issue-log-updater/SKILL.md:187` — - Tham khảo: `systems/pm-agent/templates/issue-log-template.md`
+- `agents/software/pm-agent/skills/project-operations/lessons-learned-writer/SKILL.md:68` — Output phải bám theo `systems/pm-agent/templates/lessons-learned-template.md`.
+- `agents/software/pm-agent/skills/project-operations/lessons-learned-writer/SKILL.md:190` — - Tham khảo: `systems/pm-agent/templates/lessons-learned-template.md`
+- `agents/software/pm-agent/skills/project-operations/lessons-learned-writer/examples/example-01-output.md:31` — - **Documentation location:** `projects/[project-name]/` và `systems/pm-agent/skills/`
+- `agents/software/pm-agent/skills/project-operations/status-dashboard-updater/SKILL.md:73` — Output phải bám theo `systems/pm-agent/templates/status-dashboard-template.md`.
+- `agents/software/pm-agent/skills/project-operations/status-dashboard-updater/SKILL.md:210` — - Tham khảo: `systems/pm-agent/templates/status-dashboard-template.md`
+- `agents/software/pm-agent/skills/project-operations/task-board-builder/SKILL.md:71` — Output phải bám theo `systems/pm-agent/templates/task-board-template.md`.
+- `agents/software/pm-agent/skills/project-operations/task-board-builder/SKILL.md:190` — - Tham khảo: `systems/pm-agent/templates/task-board-template.md`
+- `agents/software/product-agent/AGENT.md:67` — 5. Escalate if task needs forbidden action or conflicts with canonical PM Agent in `systems/pm-agent`.
+- `agents/software/product-agent/skills.json:27` — "canonical_pm_agent": "../../../systems/pm-agent",
+- `agents/software/qa-agent/AGENT.md:67` — 5. Escalate if task needs forbidden action or conflicts with canonical PM Agent in `systems/pm-agent`.
+- `agents/software/qa-agent/skills.json:27` — "canonical_pm_agent": "../../../systems/pm-agent",
+- `audits/existing-pm-agent.md:1` — # Audit: Existing PM Agent in `systems/pm-agent`
+- `audits/existing-pm-agent.md:5` — `systems/pm-agent/` is the canonical PM Agent framework. It must remain unchanged unless Doanh explicitly approves.
+- `audits/existing-pm-agent.md:9` — - `systems/pm-agent/README.md`
+- `audits/existing-pm-agent.md:10` — - `systems/pm-agent/STATUS.md`
+- `audits/existing-pm-agent.md:11` — - `systems/pm-agent/architecture/SYSTEM-PROMPT.md`
+- `audits/existing-pm-agent.md:12` — - `systems/pm-agent/architecture/WORKFLOW.md`
+- `audits/existing-pm-agent.md:13` — - `systems/pm-agent/runtime/policies/approval-policy.md`
+- `audits/existing-pm-agent.md:14` — - `systems/pm-agent/runtime/policies/verification-level-policy.md`
+- `audits/existing-pm-agent.md:15` — - `systems/pm-agent/skills/README.md`
+- `audits/existing-pm-agent.md:88` — | Source of truth | `systems/pm-agent` and `projects/active/...` | `agent-system/...` | Existing PM Agent remains source of truth |
+- `audits/existing-pm-agent.md:128` — Do not modify `systems/pm-agent`.
+- `audits/existing-pm-agent.md:153` — Proceed with controlled adaptation of draft PM profile into an adapter that references `systems/pm-agent` source-of-truth and preserves original PM Agent unchanged.
+- `docs/activation-guide.md:3` — > Current integration rule (2026-05-29): OpenClaw remains workspace core. The one active PM Agent now lives inside Agent-System at `agent-system/agents/software/pm-agent/`. The previous PM Adapter is archived at `agent-system/agents/software/pm-agent-adapter-legacy/`. Historical mentions of `systems/pm-agent/` refer to the old backup source only.
+- `docs/agent-role-matrix.md:3` — > Current integration rule (2026-05-29): OpenClaw remains workspace core. The one active PM Agent now lives inside Agent-System at `agent-system/agents/software/pm-agent/`. The previous PM Adapter is archived at `agent-system/agents/software/pm-agent-adapter-legacy/`. Historical mentions of `systems/pm-agent/` refer to the old backup source only.
+- `docs/integration-roadmap.md:3` — > Current integration rule (2026-05-29): OpenClaw remains workspace core. The one active PM Agent now lives inside Agent-System at `agent-system/agents/software/pm-agent/`. The previous PM Adapter is archived at `agent-system/agents/software/pm-agent-adapter-legacy/`. Historical mentions of `systems/pm-agent/` refer to the old backup source only.
+- `docs/integration-roadmap.md:196` — - PM source-of-truth remains clean;
+- `docs/phase-1-agent-skill-mapping.md:5` — Map first Phase 1 agent profiles to reviewed skills after validation run, while preserving existing PM Agent in `systems/pm-agent` as canonical source of truth.
+- `docs/phase-1-agent-skill-mapping.md:19` — Canonical PM Agent remains:
+- `docs/phase-1-agent-skill-mapping.md:22` — systems/pm-agent/
+- `docs/phase-1-agent-skill-mapping.md:33` — - `systems/pm-agent` is source of truth for PM identity, workflow, policies, templates, verification levels, approvals, and project lifecycle.
+- `docs/phase-1-agent-skill-mapping.md:36` — - Do not modify `systems/pm-agent` from this mapping without explicit approval.
+- `docs/phase-1-agent-skill-mapping.md:44` — -> Existing PM Agent (systems/pm-agent)
+- `docs/phase-1-agent-skill-mapping.md:55` — PM Agent core workflow remains systems/pm-agent workflow.
+- `docs/phase-1-agent-skill-mapping.md:81` — | PM Agent Adapter | `systems/pm-agent/` | `software/project-planning` as extension aid | `product-requirements`, `qa-verification` | Follow `systems/pm-agent` approval + verification policies |
+- `docs/phase-1-agent-skill-mapping.md:95` — 1. Reference `systems/pm-agent/architecture/SYSTEM-PROMPT.md` for PM identity/behavior.
+- `docs/phase-1-agent-skill-mapping.md:96` — 2. Reference `systems/pm-agent/architecture/WORKFLOW.md` for canonical workflow.
+- `docs/phase-1-agent-skill-mapping.md:97` — 3. Reference `systems/pm-agent/runtime/policies/verification-level-policy.md` before accepting claims.
+- `docs/phase-1-agent-skill-mapping.md:98` — 4. Reference `systems/pm-agent/runtime/policies/approval-policy.md` before approvals or high-risk actions.
+- `docs/phase-1-agent-skill-mapping.md:99` — 5. Use `systems/pm-agent/templates/task-packet-template.md` for broad/technical/risky/delegated work.
+- `docs/phase-1-agent-skill-mapping.md:100` — 6. Use `systems/pm-agent/templates/task-report-template.md` for completion/blocker review.
+- `docs/skills-json-schema.md:42` — "canonical_pm_agent": "../../../systems/pm-agent",
+- `docs/skills-json-schema.md:62` — PM Adapter is special because canonical PM Agent remains in:
+- `docs/skills-json-schema.md:65` — systems/pm-agent/
+- `docs/skills-json-schema.md:73` — "canonical_agent": "systems/pm-agent",
+- `docs/specialist-handoff-protocol.md:5` — Define controlled way for PM Agent Adapter to hand work to specialist agents while preserving canonical PM Agent in `systems/pm-agent`.
+- `docs/specialist-handoff-protocol.md:9` — Canonical PM Agent remains:
+- `docs/specialist-handoff-protocol.md:12` — systems/pm-agent/
+- `docs/specialist-handoff-protocol.md:42` — 9. Actor fields are filled using `systems/pm-agent/runtime/policies/actor-tracking-policy.md`.
+- `docs/specialist-handoff-protocol.md:49` — systems/pm-agent/runtime/policies/verification-level-policy.md
+- `skills-library/adapted/software/software-architecture/SKILL.md:129` — - Preserve PM Agent source-of-truth: use `systems/pm-agent` policies when PM-led.
+- `templates/specialist-task-packet.md:6` — systems/pm-agent/templates/task-packet-template.md
+- `templates/specialist-task-packet.md:22` — - **PM Source:** `systems/pm-agent/`
+- `templates/specialist-task-packet.md:23` — - **Workflow:** `systems/pm-agent/architecture/WORKFLOW.md`
+- `templates/specialist-task-packet.md:24` — - **Verification Policy:** `systems/pm-agent/runtime/policies/verification-level-policy.md`
+- `templates/specialist-task-packet.md:25` — - **Approval Policy:** `systems/pm-agent/runtime/policies/approval-policy.md`
+- `templates/specialist-task-packet.md:26` — - **Actor Policy:** `systems/pm-agent/runtime/policies/actor-tracking-policy.md`
+- `templates/specialist-task-report.md:6` — systems/pm-agent/templates/task-report-template.md
+- `tests/2026-05-26-agent-handoff-simulation/README.md:8` — systems/pm-agent/
+- `tests/2026-05-26-agent-handoff-simulation/README.md:19` — - Do not modify `systems/pm-agent`.
+- `tests/2026-05-26-agent-handoff-simulation/inputs/software-handoff-input.md:9` — - PM Agent source of truth remains `systems/pm-agent`.
+- `tests/2026-05-26-agent-handoff-simulation/inputs/software-handoff-input.md:9` — - PM Agent source of truth remains `systems/pm-agent`.
+- `tests/2026-05-26-agent-handoff-simulation/inputs/software-handoff-input.md:11` — - Do not modify `systems/pm-agent`.
+- `tests/2026-05-26-agent-handoff-simulation/inputs/software-handoff-input.md:34` — - No modification to `systems/pm-agent`.
+- `tests/2026-05-26-agent-handoff-simulation/outputs/handoff-issues.md:9` — | No implementation task packet yet | High for implementation | PM Adapter | Create from systems/pm-agent template before code |
+- `tests/2026-05-26-agent-handoff-simulation/outputs/handoff-issues.md:22` — PM Adapter must keep `systems/pm-agent` as canonical source and avoid silently turning proposed specialist handoff into active workflow.
+- `tests/2026-05-26-agent-handoff-simulation/outputs/software-handoff-transcript.md:5` — No runtime commands, installs, deployment, or edits to `systems/pm-agent`.
+- `tests/2026-05-26-agent-handoff-simulation/outputs/software-handoff-transcript.md:14` — systems/pm-agent/
+- `tests/2026-05-26-agent-handoff-simulation/outputs/software-handoff-transcript.md:248` — 2. Create PM Agent task packet using `systems/pm-agent/templates/task-packet-template.md`.
+- `tests/2026-05-26-agent-handoff-simulation/test-report.md:7` — Validate Phase 1 agent profiles and mapping after PM profile was corrected into adapter profile that preserves existing PM Agent in `systems/pm-agent`.
+- `tests/2026-05-26-agent-handoff-simulation/test-report.md:50` — | PM source-of-truth respected | PASS | Simulation uses `systems/pm-agent` as canonical source |
+- `tests/2026-05-26-agent-handoff-simulation/test-report.md:68` — 2. PM Agent task packet must be created from `systems/pm-agent/templates/task-packet-template.md`.
+- `tests/2026-05-26-agent-handoff-simulation/test-report.md:101` — This should not modify `systems/pm-agent`. Instead create adapter-side templates/docs, for example:
+- `tests/2026-05-26-architect-handoff-simulation/README.md:15` — - `systems/pm-agent` remains canonical PM Agent source.
+- `tests/2026-05-26-architect-handoff-simulation/inputs/architect-handoff-input.md:9` — - Existing PM Agent in `systems/pm-agent` remains canonical.
+- `tests/2026-05-26-architect-handoff-simulation/outputs/architect-handoff-transcript.md:14` — systems/pm-agent/

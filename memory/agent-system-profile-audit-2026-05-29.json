@@ -1,0 +1,240 @@
+{
+  "skills": [
+    {
+      "rel": "agents/business/business-pm-agent/skills.json",
+      "ok": true,
+      "agent": "Business PM Agent",
+      "slug": "business-pm-agent",
+      "status": "draft",
+      "keys": [
+        "agent",
+        "slug",
+        "status",
+        "domain",
+        "primary_skills",
+        "supporting_skills",
+        "handoff_protocol",
+        "safety"
+      ]
+    },
+    {
+      "rel": "agents/business/content-copy-agent/skills.json",
+      "ok": true,
+      "agent": "Content Copy Agent",
+      "slug": "content-copy-agent",
+      "status": "draft",
+      "keys": [
+        "agent",
+        "slug",
+        "status",
+        "domain",
+        "primary_skills",
+        "supporting_skills",
+        "handoff_targets",
+        "safety",
+        "handoff_protocol"
+      ]
+    },
+    {
+      "rel": "agents/business/market-research-agent/skills.json",
+      "ok": true,
+      "agent": "Market Research Agent",
+      "slug": "market-research-agent",
+      "status": "draft",
+      "keys": [
+        "agent",
+        "slug",
+        "status",
+        "domain",
+        "primary_skills",
+        "supporting_skills",
+        "handoff_targets",
+        "safety",
+        "handoff_protocol"
+      ]
+    },
+    {
+      "rel": "agents/business/performance-analyst-agent/skills.json",
+      "ok": true,
+      "agent": "Performance Analyst Agent",
+      "slug": "performance-analyst-agent",
+      "status": "draft",
+      "keys": [
+        "agent",
+        "slug",
+        "status",
+        "domain",
+        "primary_skills",
+        "supporting_skills",
+        "handoff_targets",
+        "safety",
+        "handoff_protocol"
+      ]
+    },
+    {
+      "rel": "agents/business/product-hunter-agent/skills.json",
+      "ok": true,
+      "agent": "Product Hunter Agent",
+      "slug": "product-hunter-agent",
+      "status": "draft",
+      "keys": [
+        "agent",
+        "slug",
+        "status",
+        "domain",
+        "primary_skills",
+        "supporting_skills",
+        "handoff_targets",
+        "safety",
+        "handoff_protocol"
+      ]
+    },
+    {
+      "rel": "agents/software/architect-agent/skills.json",
+      "ok": true,
+      "agent": "Architect Agent",
+      "slug": "architect-agent",
+      "status": "draft",
+      "keys": [
+        "agent",
+        "slug",
+        "status",
+        "domain",
+        "primary_skills",
+        "supporting_skills",
+        "handoff_protocol",
+        "safety"
+      ]
+    },
+    {
+      "rel": "agents/software/backend-agent/skills.json",
+      "ok": true,
+      "agent": "Backend Agent",
+      "slug": "backend-agent",
+      "status": "draft",
+      "keys": [
+        "agent",
+        "slug",
+        "status",
+        "domain",
+        "primary_skills",
+        "supporting_skills",
+        "handoff_targets",
+        "safety",
+        "handoff_protocol"
+      ]
+    },
+    {
+      "rel": "agents/software/frontend-agent/skills.json",
+      "ok": true,
+      "agent": "Frontend Agent",
+      "slug": "frontend-agent",
+      "status": "draft",
+      "keys": [
+        "agent",
+        "slug",
+        "status",
+        "domain",
+        "primary_skills",
+        "supporting_skills",
+        "handoff_targets",
+        "safety",
+        "handoff_protocol"
+      ]
+    },
+    {
+      "rel": "agents/software/pm-agent-adapter-legacy/skills.json",
+      "ok": true,
+      "agent": "PM Agent Adapter Profile",
+      "status": "adapter-draft",
+      "keys": [
+        "agent",
+        "canonical_agent",
+        "canonical_identity",
+        "status",
+        "domain",
+        "source_of_truth",
+        "extension_skills",
+        "proposed_handoff_targets",
+        "safety"
+      ]
+    },
+    {
+      "rel": "agents/software/product-agent/skills.json",
+      "ok": true,
+      "agent": "Product Agent",
+      "slug": "product-agent",
+      "status": "draft",
+      "keys": [
+        "agent",
+        "slug",
+        "status",
+        "domain",
+        "primary_skills",
+        "supporting_skills",
+        "handoff_targets",
+        "safety",
+        "handoff_protocol"
+      ]
+    },
+    {
+      "rel": "agents/software/qa-agent/skills.json",
+      "ok": true,
+      "agent": "QA Agent",
+      "slug": "qa-agent",
+      "status": "draft",
+      "keys": [
+        "agent",
+        "slug",
+        "status",
+        "domain",
+        "primary_skills",
+        "supporting_skills",
+        "handoff_targets",
+        "safety",
+        "handoff_protocol"
+      ]
+    }
+  ],
+  "agents": [
+    "agents/business/business-pm-agent/AGENT.md",
+    "agents/business/content-copy-agent/AGENT.md",
+    "agents/business/market-research-agent/AGENT.md",
+    "agents/business/performance-analyst-agent/AGENT.md",
+    "agents/business/product-hunter-agent/AGENT.md",
+    "agents/software/architect-agent/AGENT.md",
+    "agents/software/backend-agent/AGENT.md",
+    "agents/software/frontend-agent/AGENT.md",
+    "agents/software/pm-agent-adapter-legacy/AGENT.md",
+    "agents/software/product-agent/AGENT.md",
+    "agents/software/qa-agent/AGENT.md"
+  ],
+  "readmes": [
+    "README.md",
+    "agents/README.md",
+    "agents/business/business-pm-agent/README.md",
+    "agents/business/content-copy-agent/README.md",
+    "agents/business/market-research-agent/README.md",
+    "agents/business/performance-analyst-agent/README.md",
+    "agents/business/product-hunter-agent/README.md",
+    "agents/software/architect-agent/README.md",
+    "agents/software/backend-agent/README.md",
+    "agents/software/frontend-agent/README.md",
+    "agents/software/pm-agent-adapter-legacy/README.md",
+    "agents/software/pm-agent/README.md",
+    "agents/software/pm-agent/reports/portfolio/README.md",
+    "agents/software/pm-agent/skills/README.md",
+    "agents/software/product-agent/README.md",
+    "agents/software/qa-agent/README.md",
+    "tests/2026-05-26-affiliate-strategy-validation/README.md",
+    "tests/2026-05-26-agent-handoff-simulation/README.md",
+    "tests/2026-05-26-architect-handoff-simulation/README.md",
+    "tests/2026-05-26-architecture-skill-validation/README.md",
+    "tests/2026-05-26-business-handoff-simulation/README.md",
+    "tests/2026-05-26-skill-validation/README.md",
+    "tests/2026-05-27-full-affiliate-team-simulation/README.md",
+    "tests/2026-05-27-live-readonly-validation-plan/README.md",
+    "tests/2026-05-27-market-research-validation/README.md",
+    "tests/2026-05-27-product-hunter-validation/README.md"
+  ]
+}

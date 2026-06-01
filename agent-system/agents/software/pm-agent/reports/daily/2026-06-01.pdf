@@ -1,0 +1,54 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 532 >>
+stream
+BT
+/F1 18 Tf
+50 790 Td
+(Daily PM Agent Report 2026-06-01) Tj
+/F1 11 Tf
+0 -28 Td
+(Generated at: 00:22 UTC / 07:22 Asia/Ho_Chi_Minh) Tj
+0 -18 Td
+(Framework target: selected) Tj
+0 -18 Td
+(Reason: active refinement / hardening; production-grade not complete) Tj
+0 -18 Td
+(Active project candidates scanned: 0) Tj
+0 -18 Td
+(Eligible active projects: 0) Tj
+0 -18 Td
+(Source conflicts detected: 0) Tj
+0 -18 Td
+(Artifacts: 2026-06-01.md, 2026-06-01.pdf) Tj
+0 -18 Td
+(Note: full Vietnamese report is in Markdown source file.) Tj
+0 -18 Td
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+893
+%%EOF

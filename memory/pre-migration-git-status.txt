@@ -1,0 +1,14 @@
+# Pre-migration rollback state
+Fri May 29 06:42:22 UTC 2026
+
+?? .openclaw/
+?? AGENTS.md
+?? BEHAVIOR.md
+?? HEARTBEAT.md
+?? IDENTITY.md
+?? README.md
+?? SOUL.md
+?? TOOLS.md
+?? USER.md
+?? memory/
+
