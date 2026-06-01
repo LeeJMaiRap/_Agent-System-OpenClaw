@@ -104,7 +104,9 @@ def add(findings: list[Finding], severity: str, path: Path | str, message: str) 
 def iter_agent_dirs() -> Iterable[Path]:
     if not AGENTS_DIR.exists():
         return []
-    return sorted(p for p in AGENTS_DIR.glob("*/*") if p.is_dir())
+    # The integrated canonical PM Agent preserves its original PM framework
+    # structure and intentionally does not use adapter-side AGENT.md/skills.json.
+    return sorted(p for p in AGENTS_DIR.glob("*/*") if p.is_dir() and p.name != "pm-agent")
 
 
 def check_required_root(findings: list[Finding]) -> None:

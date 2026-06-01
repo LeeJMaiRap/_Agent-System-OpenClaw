@@ -101,11 +101,18 @@ agent-system/agents/software/pm-agent/
 | Tool | Path | Status |
 |---|---|---|
 | Consistency checker | `tools/check-consistency.py` | PASS |
+| Node fallback checker | `tools/check-consistency.js` | PASS |
 
-Run:
+Run preferred checker when Python 3 exists:
 
 ```text
 python3 agent-system/tools/check-consistency.py
+```
+
+Run fallback checker when Python 3 is unavailable:
+
+```text
+node agent-system/tools/check-consistency.js
 ```
 
 Expected current output:
