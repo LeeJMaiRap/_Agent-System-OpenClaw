@@ -1,0 +1,5 @@
+node --version
+cd clone-facebook && node tests/api.test.js
+cd clone-facebook && node src/server.js
+curl -sS http://127.0.0.1:3000/api/feed
+curl -sS http://127.0.0.1:3000/ | head -c 120
