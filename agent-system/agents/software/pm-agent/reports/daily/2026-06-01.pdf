@@ -1,54 +1,161 @@
 %PDF-1.4
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
-endobj
-2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
-endobj
-3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
-endobj
-4 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
-5 0 obj
-<< /Length 532 >>
+2 0 obj
+<< /Length 2207 >>
 stream
-BT
-/F1 18 Tf
-50 790 Td
-(Daily PM Agent Report 2026-06-01) Tj
-/F1 11 Tf
-0 -28 Td
-(Generated at: 00:22 UTC / 07:22 Asia/Ho_Chi_Minh) Tj
-0 -18 Td
-(Framework target: selected) Tj
-0 -18 Td
-(Reason: active refinement / hardening; production-grade not complete) Tj
-0 -18 Td
-(Active project candidates scanned: 0) Tj
-0 -18 Td
-(Eligible active projects: 0) Tj
-0 -18 Td
-(Source conflicts detected: 0) Tj
-0 -18 Td
-(Artifacts: 2026-06-01.md, 2026-06-01.pdf) Tj
-0 -18 Td
-(Note: full Vietnamese report is in Markdown source file.) Tj
-0 -18 Td
+BT /F1 10 Tf 50 800 Td 12 TL
+(# Daily Project Report - PM Agent Framework) Tj T*
+() Tj T*
+(- **Date:** 2026-06-01) Tj T*
+(- **Generated at:** 2026-06-01 23:12 UTC / 2026-06-02 06:12 Asia/Ho_Chi_Minh) Tj T*
+(- **Cron target:** 19:00 Asia/Ho_Chi_Minh) Tj T*
+(- **Project ID:** pm-agent-framework) Tj T*
+(- **Project Status:** active refinement) Tj T*
+(- **Report Type:** Daily Snapshot) Tj T*
+() Tj T*
+(## Summary) Tj T*
+(PM Agent framework ???c ch?n report v? `agent-system/agents/software/pm-agent/STATUS.md` x?c nh) Tj T*
+(?n framework v?n ?ang hardening / active refinement v? ch?a production-grade ho?n ch?nh. Kh?ng ) Tj T*
+(t?m th?y active project trong `projects/active/`, n?n kh?ng c? project daily report h?m nay.) Tj T*
+() Tj T*
+(## Framework Reporting Decision) Tj T*
+(- **Framework target:** selected) Tj T*
+(- **Reason:** framework v?n ?ang hardening core, ch?a production-grade ho?n ch?nh) Tj T*
+(- **Rule match:** spec cho ph?p framework daily snapshot khi active refinement c?n di?n ra) Tj T*
+(- **Output:** `agent-system/agents/software/pm-agent/reports/daily/2026-06-01.md`) Tj T*
+() Tj T*
+(## Active Project Scan) Tj T*
+(- **Primary scan path:** `projects/active/`) Tj T*
+(- **Fallback scan path:** `agent-system/**/projects/active/`) Tj T*
+(- **Scan result:** no active project path/files found) Tj T*
+(- **Candidates found:** 0) Tj T*
+(- **Eligible active projects:** 0) Tj T*
+(- **Eligible list:** None) Tj T*
+(- **Skipped projects:** None) Tj T*
+(- **Selector note:** `STATUS.md` ghi r? sau cleanup 2026-05-26 workspace ch?nh hi?n kh?ng c? ac) Tj T*
+(tive project folder trong `projects/active/`.) Tj T*
+() Tj T*
+(## Changes Today) Tj T*
+(Scoped git commits under PM Agent/project scope since 2026-06-01 00:00 UTC:) Tj T*
+(- None detected by this cron flow.) Tj T*
+() Tj T*
+(Working tree note:) Tj T*
+(- PM Agent path appears untracked as `?? agent-system/` from repo root. This is repository stat) Tj T*
+(e, not interpreted as daily source change.) Tj T*
+() Tj T*
+(## Capability / Readiness Snapshot) Tj T*
+(- **Framework files:** 189) Tj T*
+(- **Runtime files:** 16) Tj T*
+(- **Eval files:** 0 under `evals/` path) Tj T*
+(- **Policy files:** 8) Tj T*
+(- **Runbook files:** 6) Tj T*
 ET
 endstream
 endobj
+3 0 obj
+<< /Type /Page /Parent 8 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Length 1897 >>
+stream
+BT /F1 10 Tf 50 800 Td 12 TL
+(- **Framework core readiness:** ~85-90% per `STATUS.md`) Tj T*
+(- **Controlled pilot readiness:** ~80-85% per `STATUS.md`) Tj T*
+(- **Production-grade readiness:** ch?a ho?n t?t) Tj T*
+() Tj T*
+(## Project Portfolio Note) Tj T*
+(- Kh?ng c? active project folder trong `projects/active/`.) Tj T*
+(- Project m?i n?n d?ng structure chu?n trong `STATUS.md`:) Tj T*
+() Tj T*
+(```text) Tj T*
+(projects/active/[project-name]/) Tj T*
+(--- project.yaml) Tj T*
+(--- 01-initiation/) Tj T*
+(--- 02-planning/) Tj T*
+(--- 03-execution/) Tj T*
+(--- 04-monitoring/) Tj T*
+(--- 05-closure/) Tj T*
+(--- decisions/) Tj T*
+(--- approvals/) Tj T*
+(--- handoffs/) Tj T*
+(--- evidence/) Tj T*
+(```) Tj T*
+() Tj T*
+(## Source Conflicts Detected) Tj T*
+(None detected in scanned sources.) Tj T*
+() Tj T*
+(## Issues / Risks Needing Attention) Tj T*
+(- Framework v?n ch?a production-grade ho?n ch?nh; hardening framework core c?n ti?p t?c.) Tj T*
+(- Kh?ng c? active project ?? validate daily project report selector tr?n project th?c t?.) Tj T*
+(- `projects/active/` kh?ng t?n t?i; ??y l? expected state sau cleanup theo `STATUS.md`, kh?ng p) Tj T*
+(h?i failure.) Tj T*
+(- Cron event ??n sau m?c 19:00 Asia/Ho_Chi_Minh; report v?n d?ng date target `2026-06-01` theo ) Tj T*
+(input cron.) Tj T*
+() Tj T*
+(## Decisions / Approvals Today) Tj T*
+(- None recorded in scanned sources.) Tj T*
+() Tj T*
+(## Actor Attribution Summary) Tj T*
+(- **Human activity:** Kh?ng x?c minh ???c t? source hi?n t?i.) Tj T*
+(- **Main agent activity:** ch?y cron flow, ??c runbook/spec, scan selector, t?o framework repor) Tj T*
+(t, export PDF, attempt Telegram delivery.) Tj T*
+(- **Subagent activity:** None detected.) Tj T*
+(- **Unknown / unverifiable:** ho?t ??ng ngo?i git/source scan.) Tj T*
+() Tj T*
+(## Next Actions) Tj T*
+(1. Ti?p t?c gi? framework daily snapshot khi active refinement c?n di?n ra.) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 8 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 806 >>
+stream
+BT /F1 10 Tf 50 800 Td 12 TL
+(2. Khi c? project m?i, t?o `projects/active/[project-name]/project.yaml` v?i `status: active` ?) Tj T*
+(? selector nh?n ??ng.) Tj T*
+(3. Thi?t k? l?i team/delegation system sau khi foundation ?? ?n ??nh v? ???c duy?t.) Tj T*
+(4. Theo d?i l? do cron event ??n tr? so v?i 19:00 Asia/Ho_Chi_Minh.) Tj T*
+() Tj T*
+(## Evidence / References) Tj T*
+(- `agent-system/agents/software/pm-agent/STATUS.md`) Tj T*
+(- `agent-system/agents/software/pm-agent/runtime/runbooks/daily-report-cron.md`) Tj T*
+(- `agent-system/agents/software/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`) Tj T*
+() Tj T*
+(## Git Scope Snapshot) Tj T*
+(- Scoped PM Agent/project commits detected today: 0) Tj T*
+(- Source conflict detected: 0) Tj T*
+(- Eligible active projects: 0) Tj T*
+() Tj T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 8 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R] /Count 3 >>
+endobj
+9 0 obj
+<< /Type /Catalog /Pages 8 0 R >>
+endobj
 xref
-0 6
+0 10
 0000000000 65535 f 
 0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000241 00000 n 
-0000000311 00000 n 
-trailer
-<< /Size 6 /Root 1 0 R >>
+0000000079 00000 n 
+0000002338 00000 n 
+0000002464 00000 n 
+0000004413 00000 n 
+0000004539 00000 n 
+0000005396 00000 n 
+0000005522 00000 n 
+0000005591 00000 n 
+trailer << /Size 10 /Root 9 0 R >>
 startxref
-893
+5640
 %%EOF

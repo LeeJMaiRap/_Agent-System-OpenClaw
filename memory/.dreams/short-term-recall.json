@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-29T06:49:04.002Z",
+  "updatedAt": "2026-06-01T02:16:29.144Z",
   "entries": {
     "memory:memory/2026-05-19.md:89:110": {
       "key": "memory:memory/2026-05-19.md:89:110",
@@ -720,6 +720,68 @@
         "requested",
         "future",
         "step"
+      ]
+    },
+    "memory:memory/2026-05-29.md:10:13": {
+      "key": "memory:memory/2026-05-29.md:10:13",
+      "path": "memory/2026-05-29.md",
+      "startLine": 10,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "- 2026-05-29 06:48 UTC: Doanh inspected copied folders/files and clarified next need: agents copied into new workspace must work stably and preserve their original nature. Need to audit related paths in files, review all README.md files, and fix migration/copy path issues. Must create a plan first for Doanh approval before changes. - 2026-05-29 07:08 UTC: Completed approved post-migration Agent-System audit/fix. Created README inventory, path audit, profile audit, link audit, skills verification, active old-ref scan, and audit report. Fixed safe path/doc issues: active docs no longer canonicalize `systems/pm-agent`, specialist `skills.json` canonical PM paths now point to active integrated P",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-01T01:42:34.895Z",
+      "lastRecalledAt": "2026-06-01T01:42:34.895Z",
+      "queryHashes": [
+        "cc18a5b51ef2"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "folders/files",
+        "readme.md",
+        "migration/copy",
+        "post-migration",
+        "agent-system",
+        "audit/fix",
+        "old-ref",
+        "path/doc"
+      ]
+    },
+    "memory:memory/2026-05-29.md:1:5": {
+      "key": "memory:memory/2026-05-29.md:1:5",
+      "path": "memory/2026-05-29.md",
+      "startLine": 1,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "[Fri 2026-05-29 01:14 UTC] Doanh requested that every future next-step proposal explain clearly in Vietnamese what the next step does and why, because too many English terms make the meaning hard to understand. Apply this especially during agent-system work. - 2026-05-29 03:38 UTC: Anh Doanh vừa tạo OpenClaw fullpower trên WSL để assistant có toàn quyền/phát huy tối đa khả năng. - 2026-05-29 03:55 UTC: Anh Doanh yêu cầu đọc workspace cũ backup tại `/data/.openclaw/workspace` để hiểu context cũ. Workspace cũ có 380 file, 194 thư mục (không tính `.git`), core gồm `systems/pm-agent`, `agent-system`, `ops`, `projects`, `shared`, `memory`. Canonical PM Agent là `systems/pm-agent`; `agent-system`",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-06-01T02:16:29.144Z",
+      "lastRecalledAt": "2026-06-01T02:16:29.144Z",
+      "queryHashes": [
+        "5badf1229462"
+      ],
+      "recallDays": [
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "backup",
+        "next-step",
+        "agent-system",
+        "quyền/phát",
+        "openclaw/workspace",
+        "systems/pm-agent",
+        "fri",
+        "utc"
       ]
     }
   }
