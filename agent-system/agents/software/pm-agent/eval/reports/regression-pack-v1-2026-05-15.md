@@ -9,18 +9,18 @@ Eval pack này tập trung vào các lỗi workflow cốt lõi và các case m�
 ## Scenario Pack
 
 ### Core scenarios
-1. `systems/pm-agent/eval/scenarios/vague-requirement.md`
-2. `systems/pm-agent/eval/scenarios/scope-change.md`
-3. `systems/pm-agent/eval/scenarios/worker-failure.md`
-4. `systems/pm-agent/eval/scenarios/missing-approval.md`
-5. `systems/pm-agent/eval/scenarios/stale-project.md`
-6. `systems/pm-agent/eval/scenarios/false-done.md`
+1. `agent-system/agents/software/pm-agent/eval/scenarios/vague-requirement.md`
+2. `agent-system/agents/software/pm-agent/eval/scenarios/scope-change.md`
+3. `agent-system/agents/software/pm-agent/eval/scenarios/worker-failure.md`
+4. `agent-system/agents/software/pm-agent/eval/scenarios/missing-approval.md`
+5. `agent-system/agents/software/pm-agent/eval/scenarios/stale-project.md`
+6. `agent-system/agents/software/pm-agent/eval/scenarios/false-done.md`
 
 ### Hardening-added scenarios
-7. `systems/pm-agent/eval/scenarios/source-conflict.md`
-8. `systems/pm-agent/eval/scenarios/on-hold-in-active-path.md`
-9. `systems/pm-agent/eval/scenarios/no-change-day.md`
-10. `systems/pm-agent/eval/scenarios/missing-actor.md`
+7. `agent-system/agents/software/pm-agent/eval/scenarios/source-conflict.md`
+8. `agent-system/agents/software/pm-agent/eval/scenarios/on-hold-in-active-path.md`
+9. `agent-system/agents/software/pm-agent/eval/scenarios/no-change-day.md`
+10. `agent-system/agents/software/pm-agent/eval/scenarios/missing-actor.md`
 
 ## Expected Behavior Coverage
 Pack này phải giúp kiểm các năng lực sau:
@@ -38,7 +38,7 @@ Pack này phải giúp kiểm các năng lực sau:
 ## Pass / Fail Cách dùng
 1. Chọn scenario cần test
 2. So output/behavior thực tế của PM Agent với `Expected PM Agent Behavior`
-3. Check các mục tương ứng trong `systems/pm-agent/eval/checklists/regression-pack-checklist.md`
+3. Check các mục tương ứng trong `agent-system/agents/software/pm-agent/eval/checklists/regression-pack-checklist.md`
 4. Nếu rơi vào bất kỳ `Failure Conditions` critical nào → fail scenario
 5. Nếu output đạt expected behavior cốt lõi và không phạm failure critical → pass scenario
 

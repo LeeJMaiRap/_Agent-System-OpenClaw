@@ -105,7 +105,7 @@ def iter_agent_dirs() -> Iterable[Path]:
     if not AGENTS_DIR.exists():
         return []
     # The integrated canonical PM Agent preserves its original PM framework
-    # structure and intentionally does not use adapter-side AGENT.md/skills.json.
+    # structure and intentionally does not use specialist-profile AGENT.md/skills.json.
     return sorted(p for p in AGENTS_DIR.glob("*/*") if p.is_dir() and p.name != "pm-agent")
 
 
@@ -125,7 +125,7 @@ def check_schema_file(findings: list[Finding]) -> None:
     except Exception as exc:
         add(findings, "FAIL", schema_path, f"invalid schema JSON: {exc}")
         return
-    for key in ["$schema", "title", "type", "properties", "oneOf"]:
+    for key in ["$schema", "title", "type", "properties"]:
         if key not in schema:
             add(findings, "FAIL", schema_path, f"schema missing key: {key}")
     if schema.get("type") != "object":
@@ -133,16 +133,14 @@ def check_schema_file(findings: list[Finding]) -> None:
 
 
 def check_profile_shape(findings: list[Finding], skills_path: Path, data: dict) -> None:
-    has_primary = "primary_skills" in data
-    has_extension = "extension_skills" in data
-    if has_primary == has_extension:
-        add(findings, "FAIL", skills_path, "must contain exactly one of primary_skills or extension_skills")
-    if has_primary and "slug" not in data:
-        add(findings, "FAIL", skills_path, "normal specialist profile missing slug")
-    if has_primary and "handoff_protocol" not in data:
-        add(findings, "WARN", skills_path, "normal specialist profile missing handoff_protocol")
-    if has_extension and "canonical_agent" not in data:
-        add(findings, "WARN", skills_path, "adapter-style profile missing canonical_agent")
+    if "primary_skills" not in data:
+        add(findings, "FAIL", skills_path, "specialist profile missing primary_skills")
+    if "extension_skills" in data or "canonical_agent" in data:
+        add(findings, "FAIL", skills_path, "non-current PM profile fields are not allowed")
+    if "slug" not in data:
+        add(findings, "FAIL", skills_path, "specialist profile missing slug")
+    if "handoff_protocol" not in data:
+        add(findings, "WARN", skills_path, "specialist profile missing handoff_protocol")
 
 
 def check_agents(findings: list[Finding]) -> None:
@@ -167,27 +165,12 @@ def check_agents(findings: list[Finding]) -> None:
                 add(findings, "FAIL", skills_path, f"missing required key: {key}")
         check_profile_shape(findings, skills_path, data)
 
-        # Normal specialist profiles use primary_skills/supporting_skills.
-        # PM adapter profile preserves canonical PM as source_of_truth and stores optional extension skills under extension_skills.
         skill_lists: dict[str, list[str]] = {}
-        if "primary_skills" in data:
-            primary = data.get("primary_skills", [])
-            if not isinstance(primary, list) or not primary:
-                add(findings, "FAIL", skills_path, "primary_skills must be non-empty list")
-            skill_lists["primary_skills"] = primary
-            skill_lists["supporting_skills"] = data.get("supporting_skills", [])
-        elif "extension_skills" in data:
-            ext = data.get("extension_skills", {})
-            if not isinstance(ext, dict):
-                add(findings, "FAIL", skills_path, "extension_skills must be object")
-            else:
-                primary = ext.get("primary", [])
-                if not isinstance(primary, list) or not primary:
-                    add(findings, "FAIL", skills_path, "extension_skills.primary must be non-empty list")
-                skill_lists["extension_skills.primary"] = primary
-                skill_lists["extension_skills.supporting"] = ext.get("supporting", [])
-        else:
-            add(findings, "FAIL", skills_path, "missing primary_skills or extension_skills")
+        primary = data.get("primary_skills", [])
+        if not isinstance(primary, list) or not primary:
+            add(findings, "FAIL", skills_path, "primary_skills must be non-empty list")
+        skill_lists["primary_skills"] = primary
+        skill_lists["supporting_skills"] = data.get("supporting_skills", [])
 
         for key, value in skill_lists.items():
             if value is None:
@@ -204,10 +187,8 @@ def check_agents(findings: list[Finding]) -> None:
                     add(findings, "FAIL", skills_path, f"missing {key} target: {target_rel}")
 
         hp = data.get("handoff_protocol")
-        is_adapter = "extension_skills" in data and "canonical_agent" in data
         if hp is None:
-            if not is_adapter:
-                add(findings, "WARN", skills_path, "handoff_protocol missing")
+            add(findings, "WARN", skills_path, "handoff_protocol missing")
         elif not isinstance(hp, dict):
             add(findings, "FAIL", skills_path, "handoff_protocol must be object")
         else:

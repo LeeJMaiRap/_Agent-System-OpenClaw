@@ -1,6 +1,6 @@
 # Agent Role Matrix
 
-> Current integration rule (2026-05-29): OpenClaw remains workspace core. The one active PM Agent now lives inside Agent-System at `agent-system/agents/software/pm-agent/`. The previous PM Adapter is archived at `agent-system/agents/software/pm-agent-adapter-legacy/`. Old backup path references are historical only; see `memory/rollback-source.md`.
+> Current integration rule (2026-05-29): OpenClaw remains workspace core. The one active PM Agent lives inside Agent-System at `agent-system/agents/software/pm-agent/`. Only this PM Agent is part of the current model.
 ## Purpose
 
 Define role ownership for Phase 1 `agent-system` while preserving the validated PM Agent now integrated at `agent-system/agents/software/pm-agent/` as canonical source of truth.
@@ -22,8 +22,8 @@ agent-system/agents/software/pm-agent/
 Meaning:
 
 - PM Agent is the canonical integrated PM Agent inside `agent-system`.
-- `agent-system/agents/software/pm-agent` is not the legacy adapter.
-- Existing PM Agent workflow, policies, templates, verification levels, and approvals remain authoritative.
+- `agent-system/agents/software/pm-agent` is the only PM Agent source of truth.
+- PM Agent workflow, policies, templates, verification levels, and approvals remain authoritative.
 - Specialist delegation is proposed extension until explicitly approved.
 
 ## Software Team
@@ -31,7 +31,6 @@ Meaning:
 | Agent/Profile | Source | Owns | Does Not Own | Handoff Rule |
 |---|---|---|---|---|
 | PM Agent | `agent-system/agents/software/pm-agent/` | PM lifecycle, scope, approvals, project docs, task board, evidence review, reporting, closure | Specialist implementation ownership; unsupported done/working claims | Canonical workflow and policy source |
-| PM Agent Adapter Legacy | `agent-system/agents/software/pm-agent-adapter-legacy/` | archived bridge profile kept for history | active PM authority; replacing canonical PM Agent | historical reference only |
 | Product Agent | `agent-system/agents/software/product-agent/` | PRD, MVP scope, user stories, acceptance criteria, non-goals, open questions | architecture/code/final implementation decisions | requires Specialist Task Packet + returns Specialist Task Report |
 | Architect Agent | `agent-system/agents/software/architect-agent/` | stack, architecture, ADRs, boundaries, integration strategy, technical risks, specialist handoff notes | daily task execution; PM approval decisions; frontend/backend implementation ownership | requires Specialist Task Packet + returns Specialist Task Report |
 | Frontend Agent | `agent-system/agents/software/frontend-agent/` | UI, components, client state, forms, frontend verification | backend/database ownership; product scope change | requires Specialist Task Packet + returns Specialist Task Report |
@@ -70,7 +69,7 @@ agent-system/agents/software/pm-agent/runtime/policies/acceptance-verification-p
 ## Hard Boundaries
 
 - Do not modify validated PM Agent behavior unless Doanh approves.
-- Do not treat PM Adapter as canonical PM Agent.
+- Do not treat PM Agent as canonical PM Agent.
 - Do not revive old specialist-agent branch as active workflow.
 - Do not claim `tested`, `working`, `integrated`, `deployed`, or `production-ready` without evidence level match.
 - Do not post, message, run ads, use payment/API keys, or take external action without approval.

@@ -31,7 +31,7 @@ agent-system/agents/software/pm-agent/
 Meaning:
 
 - `agent-system/agents/software/pm-agent` is source of truth for PM identity, workflow, policies, templates, verification levels, approvals, and project lifecycle.
-- `agent-system/agents/software/pm-agent` is the integrated canonical PM Agent, not the legacy adapter.
+- `agent-system/agents/software/pm-agent` is the integrated canonical PM Agent, the only PM Agent source of truth.
 - Specialist handoff is proposed extension only until approved.
 - Do not modify `agent-system/agents/software/pm-agent` from this mapping without explicit approval.
 
@@ -41,12 +41,12 @@ Current safe interpretation:
 
 ```text
 Human request
-  -> Existing PM Agent (agent-system/agents/software/pm-agent)
+  -> PM Agent (agent-system/agents/software/pm-agent)
   -> PM Agent maps possible specialist handoff
   -> Product Agent when requirements/PRD support is approved
   -> Frontend Agent / Backend Agent when implementation delegation is approved
   -> QA Agent for verification/review
-  -> Existing PM Agent acceptance/evidence handoff
+  -> PM Agent acceptance/evidence handoff
 ```
 
 Important:

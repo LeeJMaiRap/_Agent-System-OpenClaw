@@ -144,9 +144,9 @@ Errors:
 
 | Risk | Impact | Mitigation | Owner |
 |---|---|---|---|
-| Persistence expectation unclear | High | ask Doanh before implementation | PM Adapter |
+| Persistence expectation unclear | High | ask Doanh before implementation | PM Agent |
 | API over-engineering | Medium | frontend-first phase | Architect Agent |
-| Scope creep into PM platform | High | keep non-goals explicit | PM Adapter |
+| Scope creep into PM platform | High | keep non-goals explicit | PM Agent |
 | Unsupported working claim | High | keep Verification Level Paper | QA Agent |
 
 ## Specialist Handoff

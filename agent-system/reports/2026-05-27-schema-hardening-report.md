@@ -33,7 +33,7 @@ Schema supports two profile styles:
    - optional `safety`
    - optional `handoff_protocol`
 
-2. PM Adapter profile:
+2. PM Agent profile:
    - `agent`
    - `canonical_agent`
    - `canonical_identity`

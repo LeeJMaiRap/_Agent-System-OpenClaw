@@ -1,6 +1,6 @@
 # Integration Roadmap
 
-> Current integration rule (2026-05-29): OpenClaw remains workspace core. The one active PM Agent now lives inside Agent-System at `agent-system/agents/software/pm-agent/`. The previous PM Adapter is archived at `agent-system/agents/software/pm-agent-adapter-legacy/`. Old backup path references are historical only; see `memory/rollback-source.md`.
+> Current integration rule (2026-05-29): OpenClaw remains workspace core. The one active PM Agent lives inside Agent-System at `agent-system/agents/software/pm-agent/`. Only this PM Agent is part of the current model.
 ## Direction
 
 `agent-system/` is an extension layer for skills, agent profiles, and specialist handoff design.
@@ -11,7 +11,7 @@ Canonical PM Agent inside Agent-System:
 agent-system/agents/software/pm-agent/
 ```
 
-PM Adapter lives at:
+PM Agent lives at:
 
 ```text
 agent-system/agents/software/pm-agent/
@@ -104,7 +104,7 @@ Result:
 
 ```text
 PASS: PM source-of-truth clarified.
-PASS: legacy PM adapter no longer implies new PM Agent.
+PASS: single PM Agent source-of-truth is clarified.
 ```
 
 ## Phase 3 — Specialist Handoff Protocol
@@ -115,7 +115,7 @@ Completed:
 
 - Added controlled handoff protocol:
   - `docs/specialist-handoff-protocol.md`
-- Added adapter-side templates:
+- Added specialist handoff templates:
   - `templates/specialist-task-packet.md`
   - `templates/specialist-task-report.md`
 - Updated specialist agent profiles to reference packet/report flow.
@@ -153,18 +153,18 @@ Rule:
 skill reviewed + tested before agent becomes active in mapping
 ```
 
-## Phase 5 — Controlled Pilot with Existing PM Agent
+## Phase 5 — Controlled Pilot with PM Agent
 
 Status: future, requires approval
 
 Goal:
 
-Run a small PM-led project using existing PM Agent plus adapter-side specialist handoff.
+Run a small PM-led project using existing PM Agent plus specialist handoff.
 
 Pilot constraints:
 
 - Integrated PM Agent remains source of truth.
-- PM Adapter creates Specialist Task Packet.
+- PM Agent creates Specialist Task Packet.
 - Specialist returns Specialist Task Report.
 - Verification Level starts at Paper or Local depending task.
 - Preflight required for Local/Integration/Production.
@@ -179,7 +179,7 @@ Tiny internal task board planning -> one small local implementation task -> QA v
 Required before pilot:
 
 1. Doanh approves pilot scope.
-2. PM Adapter creates task packet.
+2. PM Agent creates task packet.
 3. Persistence decision made.
 4. Preflight completed if Local verification requested.
 

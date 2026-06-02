@@ -4,20 +4,20 @@ Date: 2026-05-26 UTC
 
 ## Purpose
 
-Validate Phase 1 agent profiles and mapping after PM profile was corrected into adapter profile that preserves existing PM Agent in `systems/pm-agent`.
+Validate Phase 1 specialist profiles and PM-led handoff mapping.
 
 ## Scope
 
 Tested flows:
 
 1. Software handoff simulation:
-   - Existing PM Agent rules
-   - PM Agent Adapter
+   - PM Agent rules
+   - PM Agent
    - Product Agent
    - Frontend Agent
    - Backend Agent
    - QA Agent
-   - PM Adapter acceptance summary
+   - PM Agent acceptance summary
 
 2. Affiliate handoff simulation:
    - Content Copy Agent
@@ -47,8 +47,8 @@ Outputs:
 
 | Area | Result | Notes |
 |---|---|---|
-| PM source-of-truth respected | PASS | Simulation uses `systems/pm-agent` as canonical source |
-| PM adapter role clarity | PASS | Adapter does not replace PM Agent |
+| PM source-of-truth respected | PASS | Simulation uses `agent-system/agents/software/pm-agent` as canonical source |
+| PM role clarity | PASS | Specialists do not replace PM Agent |
 | Software role boundaries | PASS | Product/Frontend/Backend/QA stay in roles |
 | QA blocker behavior | PASS | QA marks implementation readiness BLOCKED |
 | Verification claim control | PASS | Only Paper-level claim accepted |
@@ -65,7 +65,7 @@ BLOCKED: implementation readiness.
 Blockers before implementation:
 
 1. Persistence approach must be chosen.
-2. PM Agent task packet must be created from `systems/pm-agent/templates/task-packet-template.md`.
+2. PM Agent task packet must be created from `agent-system/agents/software/pm-agent/templates/task-packet-template.md`.
 3. Verification Level should be Local for implementation.
 4. Preflight must run before code changes.
 
@@ -98,7 +98,7 @@ Next best step:
 Create controlled PM task-packet template for future specialist handoff work
 ```
 
-This should not modify `systems/pm-agent`. Instead create adapter-side templates/docs, for example:
+This should preserve `agent-system/agents/software/pm-agent/` and use specialist handoff templates/docs, for example:
 
 ```text
 agent-system/docs/specialist-handoff-protocol.md
@@ -108,6 +108,6 @@ agent-system/templates/specialist-task-report.md
 
 Purpose:
 
-- define how PM Agent Adapter hands work to Product/Frontend/Backend/QA;
+- define how PM Agent hands work to Product/Frontend/Backend/QA;
 - inherit required fields from existing PM Agent task packet/report;
 - keep specialist delegation extension explicit and controlled.

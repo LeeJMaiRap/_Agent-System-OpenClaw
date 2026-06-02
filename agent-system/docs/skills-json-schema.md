@@ -39,7 +39,7 @@ Most specialist agents use:
     "protocol": "../../../docs/specialist-handoff-protocol.md",
     "task_packet_template": "../../../templates/specialist-task-packet.md",
     "task_report_template": "../../../templates/specialist-task-report.md",
-    "canonical_pm_agent": "../../../agent-system/agents/software/pm-agent",
+    "canonical_pm_agent": "../pm-agent",
     "requires_task_packet": true,
     "requires_task_report": true,
     "respect_verification_levels": true,
@@ -57,39 +57,25 @@ Required for normal profiles:
 - `primary_skills`
 - `handoff_protocol` for specialist handoffs
 
-## PM Agent Profile
+## PM Agent Rule
 
-PM Agent is special because canonical PM Agent now lives in:
+There is one PM Agent source of truth:
 
 ```text
 agent-system/agents/software/pm-agent/
 ```
 
-Archived adapter-style profiles may use:
+Specialist `skills.json` files must reference this PM Agent through `handoff_protocol.canonical_pm_agent` when PM-led handoff is required.
 
-```json
-{
-  "agent": "PM Agent Adapter Legacy",
-  "canonical_agent": "agent-system/agents/software/pm-agent",
-  "canonical_identity": "Lệ",
-  "status": "legacy-adapter",
-  "domain": "software",
-  "source_of_truth": [],
-  "extension_skills": {
-    "primary": [],
-    "supporting": []
-  },
-  "proposed_handoff_targets": [],
-  "safety": {}
-}
+Non-current PM profile fields are not allowed in current profiles:
+
+```text
+canonical_agent
+canonical_identity
+source_of_truth
+extension_skills
+proposed_handoff_targets
 ```
-
-Required for adapter-style profile:
-
-- `agent`
-- `status`
-- `domain`
-- `extension_skills.primary`
 
 ## Path Rules
 

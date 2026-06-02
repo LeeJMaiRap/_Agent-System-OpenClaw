@@ -17,7 +17,7 @@ PASS at Paper level; implementation blocked until persistence/task packet/prefli
 
 ## Limits / blockers
 
-- Old PM Adapter and `systems/pm-agent/` wording is historical. Current PM Agent path is `agent-system/agents/software/pm-agent/`.
+- Old PM Agent and `agent-system/agents/software/pm-agent/` wording is historical. Current PM Agent path is `agent-system/agents/software/pm-agent/`.
 - No code implementation, dependency install, deployment, cloud, secrets, or external action.
 - Blockers: persistence decision, implementation task packet, local preflight.
 

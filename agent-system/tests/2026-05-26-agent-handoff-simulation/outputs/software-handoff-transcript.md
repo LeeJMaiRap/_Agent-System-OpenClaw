@@ -2,16 +2,16 @@
 
 Verification Level: Paper
 
-No runtime commands, installs, deployment, or edits to `systems/pm-agent`.
+No runtime commands, installs, deployment, or edits to `agent-system/agents/software/pm-agent/`.
 
 ---
 
-## 1. Existing PM Agent Rule Check
+## 1. PM Agent Rule Check
 
 Canonical PM Agent source:
 
 ```text
-systems/pm-agent/
+agent-system/agents/software/pm-agent/
 ```
 
 Rules applied:
@@ -32,7 +32,7 @@ Do not claim tested/working/integrated.
 
 ---
 
-## 2. PM Agent Adapter Intake
+## 2. PM Agent Intake
 
 Input:
 
@@ -41,7 +41,7 @@ Input:
 Adapter interpretation:
 
 - This is not an implementation task yet.
-- Existing PM Agent lifecycle would start with initiation/planning artifacts.
+- PM Agent lifecycle would start with initiation/planning artifacts.
 - Specialist handoff is simulated extension only.
 
 Initial status:
@@ -79,7 +79,7 @@ PRD summary:
   - filter by status;
   - reject invalid/empty title.
 
-Handoff to PM Adapter:
+Handoff to PM Agent:
 
 ```text
 Requirements ready at Paper level.
@@ -88,7 +88,7 @@ Needs PM planning and specialist spec split.
 
 ---
 
-## 4. PM Agent Adapter Planning Summary
+## 4. PM Agent Planning Summary
 
 Using `software/project-planning` as extension aid.
 
@@ -99,7 +99,7 @@ Milestones:
 | 1 | Requirements ready | Product Agent | PRD section |
 | 2 | UI/API specs ready | Frontend + Backend Agents | Spec sections |
 | 3 | QA review ready | QA Agent | QA report |
-| 4 | PM acceptance summary | PM Adapter | Handoff summary |
+| 4 | PM acceptance summary | PM Agent | Handoff summary |
 
 Task packet requirement for future implementation:
 
@@ -225,15 +225,15 @@ Evidence:
 
 ---
 
-## 8. PM Adapter Acceptance Summary
+## 8. PM Agent Acceptance Summary
 
-PM Adapter accepts only this claim:
+PM Agent accepts only this claim:
 
 ```text
 Paper-level handoff simulation completed.
 ```
 
-PM Adapter rejects these claims:
+PM Agent rejects these claims:
 
 ```text
 tested
@@ -245,7 +245,7 @@ production-ready
 Next action before implementation:
 
 1. Ask Doanh to choose persistence approach.
-2. Create PM Agent task packet using `systems/pm-agent/templates/task-packet-template.md`.
+2. Create PM Agent task packet using `agent-system/agents/software/pm-agent/templates/task-packet-template.md`.
 3. Define Verification Level: Local.
 4. Run preflight before code changes.
 

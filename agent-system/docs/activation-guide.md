@@ -1,6 +1,6 @@
 # Agent System Activation Guide
 
-> Current integration rule (2026-05-29): OpenClaw remains workspace core. The one active PM Agent now lives inside Agent-System at `agent-system/agents/software/pm-agent/`. The previous PM Adapter is archived at `agent-system/agents/software/pm-agent-adapter-legacy/`. Old backup path references are historical only; see `memory/rollback-source.md`.
+> Current integration rule (2026-05-29): OpenClaw remains workspace core. The one active PM Agent lives inside Agent-System at `agent-system/agents/software/pm-agent/`. Only this PM Agent is part of the current model.
 Status: draft guide
 Date: 2026-05-27 UTC
 

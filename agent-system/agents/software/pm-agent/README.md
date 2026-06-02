@@ -8,7 +8,7 @@ PM Agent (Lệ) là PM framework chính trong Agent-System. Vai trò: quản lý
 agent-system/agents/software/pm-agent/
 ```
 
-Sau migration 2026-05-29, đây là PM Agent chủ động trong Agent-System. Legacy adapter nằm ở `../pm-agent-adapter-legacy/` và không phải source of truth.
+Sau migration 2026-05-29, đây là PM Agent chủ động và source of truth trong Agent-System.
 
 ## Cấu trúc thư mục
 

@@ -12,7 +12,7 @@ Canonical PM Agent remains:
 agent-system/agents/software/pm-agent/
 ```
 
-This protocol is adapter-side only. It does not modify or replace PM Agent core workflow.
+This protocol is specialist-handoff only. It does not modify or replace PM Agent core workflow.
 
 ## When to Use
 
@@ -150,7 +150,7 @@ Stop and ask Doanh if:
 - Critical/High QA/security blocker exists;
 - evidence cannot support requested claim;
 - specialist role boundary conflict appears;
-- canonical PM Agent source conflicts with adapter plan.
+- canonical PM Agent source conflicts with specialist handoff plan.
 
 ## Acceptance
 

@@ -1,6 +1,6 @@
 # PM Agent Update Plan - 2026-05-14
 
-- **Scope:** Đợt nâng cấp production-readiness cho chính `systems/pm-agent/`
+- **Scope:** Đợt nâng cấp production-readiness cho chính `agent-system/agents/software/pm-agent/`
 - **Owner:** Anh Doanh + PM Agent
 - **Status:** Active plan - revised to Option B on 2026-05-15
 - **Purpose:** Biến PM Agent từ framework đã validate sang hệ có thể đưa vào sử dụng thực tế ổn định hơn.
@@ -8,14 +8,14 @@
 
 ## Vì sao file này lưu ở đây?
 
-**Path:** `systems/pm-agent/reports/plans/update-pma-plan-2026-05-14.md`
+**Path:** `agent-system/agents/software/pm-agent/reports/plans/update-pma-plan-2026-05-14.md`
 
 ### Lý do chọn vị trí này
 1. Đây là **kế hoạch nâng cấp cho chính PM Agent framework**
 2. Không phải project nghiệp vụ trong `projects/`
 3. Không phải tri thức tham khảo tĩnh trong `knowledge/`
 4. Không phải memory cá nhân trong `agent-core/`
-5. `systems/pm-agent/reports/plans/` phù hợp cho các kế hoạch vận hành / nâng cấp / đợt cải tiến của framework
+5. `agent-system/agents/software/pm-agent/reports/plans/` phù hợp cho các kế hoạch vận hành / nâng cấp / đợt cải tiến của framework
 
 ---
 
@@ -112,7 +112,7 @@ Sau khi chạy production cron thực tế và review trạng thái hiện tại
 - [x] Quy định khi nào **không được bịa actor**
 
 **Output mong muốn:**
-- policy file cho actor tracking trong `systems/pm-agent/runtime/policies/`
+- policy file cho actor tracking trong `agent-system/agents/software/pm-agent/runtime/policies/`
 
 ---
 
@@ -153,7 +153,7 @@ Sau khi chạy production cron thực tế và review trạng thái hiện tại
 - [x] Thêm ghi chú blocker thực tế
 
 **Output mong muốn:**
-- `systems/pm-agent/eval/checklists/production-readiness-checklist.md` phản ánh đúng trạng thái thật
+- `agent-system/agents/software/pm-agent/eval/checklists/production-readiness-checklist.md` phản ánh đúng trạng thái thật
 
 ---
 
@@ -174,7 +174,7 @@ Sau khi chạy production cron thực tế và review trạng thái hiện tại
 - [x] Bổ sung actor attribution logic
 - [x] Bổ sung no-change mode
 - [x] Bổ sung stopped/on-hold project handling
-- [x] Bổ sung framework-report mode cho `systems/pm-agent/`
+- [x] Bổ sung framework-report mode cho `agent-system/agents/software/pm-agent/`
 
 **Output mong muốn:**
 - skill daily report usable hơn cho thực tế

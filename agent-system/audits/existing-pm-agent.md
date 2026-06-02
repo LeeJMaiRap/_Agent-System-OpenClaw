@@ -1,4 +1,4 @@
-# Audit: Existing PM Agent before Agent-System Integration
+# Audit: PM Agent before Agent-System Integration
 
 > Migration note (2026-05-29): this audit is historical. The validated PM Agent is now active at `agent-system/agents/software/pm-agent/`; OpenClaw remains workspace core.
 
@@ -17,7 +17,7 @@ Primary files inspected:
 - `agent-system/agents/software/pm-agent/skills/README.md`
 - `agent-system/agents/software/pm-agent/AGENT.md` draft profile
 
-## Existing PM Agent Summary
+## PM Agent Summary
 
 PM Agent (Lệ) is a mature PM framework on OpenClaw. It manages projects through documents, task boards, policies, evidence, approvals, reports, and closure.
 
@@ -42,7 +42,7 @@ From `STATUS.md`:
 - Old team/specialist-agent branch was removed from active workflow.
 - Rebuilt team/delegation system is future design.
 
-## Non-negotiable Rules from Existing PM Agent
+## Non-negotiable Rules from PM Agent
 
 - Do not mix PM Agent framework state with managed project state.
 - Project source of truth lives in `projects/active/[project-name]/`.
@@ -77,9 +77,9 @@ User request
   -> final report + lessons learned
 ```
 
-## Comparison: Existing PM Agent vs Draft Profile
+## Comparison: PM Agent vs Draft Profile
 
-| Area | Existing PM Agent | Draft `agent-system` PM Profile | Decision |
+| Area | PM Agent | Draft `agent-system` PM Profile | Decision |
 |---|---|---|---|
 | Identity | Lệ, mature PM framework | Generic PM Agent | Use existing identity/reference |
 | Scope | Full PM lifecycle | Software delivery orchestrator | Keep existing broader lifecycle; add software-team bridge only as extension |
@@ -88,9 +88,9 @@ User request
 | Approval | Formal approval policy | Basic approval mention | Reference existing approval policy |
 | Task packet/report | Formal templates | Not explicit enough | Add task packet/report requirements |
 | Source of truth | `agent-system/agents/software/pm-agent` and `projects/active/...` | `agent-system/...` | Integrated PM Agent remains source of truth |
-| Runtime readiness | Controlled pilot ready, not production | Draft profile | Draft must be adapter only |
+| Runtime readiness | Controlled pilot ready, not production | Draft profile | Draft must preserve PM source of truth |
 
-## Keep from Existing PM Agent
+## Keep from PM Agent
 
 - Identity/name: Lệ.
 - Full lifecycle workflow.
@@ -115,12 +115,12 @@ User request
 ## Conflicts
 
 1. Draft implies specialist handoff flow is active.
-   - Existing PM Agent says old team/specialist branch is removed and rebuilt team/delegation is future design.
-   - Resolution: mark specialist handoff as proposed extension/adapter only.
+   - PM Agent says old team/specialist branch is removed and rebuilt team/delegation is future design.
+   - Resolution: mark specialist handoff as proposed specialist extension only.
 
 2. Draft is too narrow as software delivery PM only.
-   - Existing PM Agent handles full project framework.
-   - Resolution: draft profile should become `PM Agent Adapter for agent-system`, not replacement.
+   - PM Agent handles full project framework.
+   - Resolution: draft profile should become `PM Agent for agent-system`, not replacement.
 
 3. Draft lacks formal verification/approval details.
    - Resolution: reference existing PM Agent policies directly.
@@ -139,7 +139,7 @@ Adapt only:
 New role for draft profile:
 
 ```text
-PM Agent Adapter Profile
+PM Agent Profile
 ```
 
 Meaning:
@@ -152,4 +152,4 @@ Meaning:
 
 ## Recommendation
 
-Proceed with controlled adaptation of draft PM profile into an adapter that references `agent-system/agents/software/pm-agent` source-of-truth and preserves original PM Agent unchanged.
+Proceed with controlled alignment of PM profile with `agent-system/agents/software/pm-agent` source-of-truth and preserves original PM Agent unchanged.

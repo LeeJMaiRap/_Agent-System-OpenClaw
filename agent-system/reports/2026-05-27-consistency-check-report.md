@@ -40,7 +40,7 @@ RESULT: PASS
 - All `skills.json` files parse as valid JSON.
 - Required JSON keys exist.
 - `primary_skills` / `supporting_skills` paths exist.
-- PM Adapter `extension_skills` paths exist.
+- PM Agent `extension_skills` paths exist.
 - Specialist `handoff_protocol` paths exist.
 - Every test folder has:
   - `README.md`
@@ -52,13 +52,13 @@ RESULT: PASS
 
 Initial script run found expected tuning issues:
 
-- PM Adapter uses `extension_skills` and canonical PM source-of-truth fields instead of normal specialist `primary_skills` schema.
+- PM Agent uses `extension_skills` and canonical PM source-of-truth fields instead of normal specialist `primary_skills` schema.
 - Stale marker scan initially included historical hardening report examples.
 - Paper overclaim scan initially flagged negative/prohibited examples such as “do not claim working”.
 
 Script was adjusted to:
 
-- support PM Adapter schema;
+- support PM Agent schema;
 - scan stale markers only in active docs/agent profiles;
 - ignore negative/prohibited wording contexts;
 - ignore fenced code blocks/headings for Paper overclaim scan.

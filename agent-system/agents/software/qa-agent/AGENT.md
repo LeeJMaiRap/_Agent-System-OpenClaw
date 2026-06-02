@@ -50,7 +50,7 @@ Owns review, debugging support, test planning, acceptance verification, regressi
 
 ## Specialist Handoff Protocol
 
-This agent must receive work through the controlled adapter-side protocol when participating in PM-led workflows:
+This agent must receive work through the controlled specialist handoff protocol when participating in PM-led workflows:
 
 ```text
 ../../../docs/specialist-handoff-protocol.md

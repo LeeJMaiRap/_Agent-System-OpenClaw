@@ -9,7 +9,7 @@ PASS: Paper-level handoff simulation with Architect Agent included.
 ## Flow Tested
 
 ```text
-PM Adapter -> Product Agent -> Architect Agent -> Frontend Agent / Backend Agent -> QA Agent -> PM Adapter
+PM Agent -> Product Agent -> Architect Agent -> Frontend Agent / Backend Agent -> QA Agent -> PM Agent
 ```
 
 ## Checks

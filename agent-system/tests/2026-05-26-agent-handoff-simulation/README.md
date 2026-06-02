@@ -19,7 +19,7 @@ PASS at Paper level; implementation/external execution remained blocked.
 
 ## Limits / blockers
 
-- Old `systems/pm-agent/` references are historical; current active PM Agent is `agent-system/agents/software/pm-agent/`.
+- Old `agent-system/agents/software/pm-agent/` references are historical; current active PM Agent is `agent-system/agents/software/pm-agent/`.
 - Implementation requires persistence decision, task packet, local preflight, and evidence.
 - Affiliate external actions require human approval.
 

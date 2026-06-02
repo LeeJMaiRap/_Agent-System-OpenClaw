@@ -12,11 +12,7 @@ PM Agent is an agent inside Agent-System:
 agent-system/agents/software/pm-agent/
 ```
 
-There is one active PM Agent in this workspace. The previous adapter profile was archived at:
-
-```text
-agent-system/agents/software/pm-agent-adapter-legacy/
-```
+There is one active PM Agent in this workspace. Only this PM Agent is part of the current model.
 
 ## Migration Source
 

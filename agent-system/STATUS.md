@@ -1,6 +1,6 @@
 # Agent System Status
 
-> Current integration rule (2026-05-29): OpenClaw remains workspace core. The one active PM Agent now lives inside Agent-System at `agent-system/agents/software/pm-agent/`. The previous PM Adapter is archived at `agent-system/agents/software/pm-agent-adapter-legacy/`. Old backup path references are historical only; see `memory/rollback-source.md`.
+> Current integration rule (2026-05-29): OpenClaw remains workspace core. The one active PM Agent lives inside Agent-System at `agent-system/agents/software/pm-agent/`. Only this PM Agent is part of the current model.
 Last updated: 2026-05-29 UTC
 Baseline commit: `d2fb0de Add agent-system specialist teams and validation flows`
 Latest committed workspace snapshot: `7538f39 Commit workspace snapshot`
@@ -19,13 +19,13 @@ Canonical PM Agent inside Agent-System:
 agent-system/agents/software/pm-agent/
 ```
 
-`agent-system/` is an adapter/specialist layer only.
+`agent-system/` is an specialist layer only.
 
 ## Current Health
 
 | Area | Status | Evidence |
 |---|---|---|
-| Agent profiles | PASS | 11 agents have `AGENT.md`, `README.md`, `skills.json` |
+| Agent profiles | PASS | PM Agent framework exists; 10 specialist profiles have `AGENT.md`, `README.md`, `skills.json` |
 | Skills mappings | PASS | `check-consistency.py` validates skill paths |
 | Handoff protocol | PASS | shared packet/report templates exist |
 | Validation artifacts | PASS | 10 test folders with reports |

@@ -298,7 +298,7 @@
 
 ### Files Created/Updated Summary
 ```
-systems/pm-agent/
+agent-system/agents/software/pm-agent/
 ├── runtime/
 │   ├── policies/
 │   │   ├── project-lifecycle-path-policy.md (NEW)

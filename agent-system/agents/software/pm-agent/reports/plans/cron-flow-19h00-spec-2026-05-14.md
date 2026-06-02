@@ -7,7 +7,7 @@
 
 ## Vì sao file này lưu ở đây?
 
-**Path:** `systems/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`
+**Path:** `agent-system/agents/software/pm-agent/reports/plans/cron-flow-19h00-spec-2026-05-14.md`
 
 ### Lý do
 1. Đây là **thiết kế vận hành cho chính PM Agent framework**
@@ -82,12 +82,12 @@ enabled: false
 
 ## Target loại A — Framework report
 Path output:
-`systems/pm-agent/reports/daily/YYYY-MM-DD.md`
+`agent-system/agents/software/pm-agent/reports/daily/YYYY-MM-DD.md`
 
 ### Khi nào chạy?
 Chạy khi:
 - PM Agent framework còn đang ở trạng thái active refinement / production-readiness work
-- có thay đổi liên quan `systems/pm-agent/` trong ngày
+- có thay đổi liên quan `agent-system/agents/software/pm-agent/` trong ngày
 - hoặc đang bật chế độ bắt buộc daily snapshot cho framework
 
 ### Khi nào bỏ qua?
@@ -228,7 +228,7 @@ Ví dụ thiếu:
 ## Nếu thiếu dữ liệu cốt lõi
 Ví dụ:
 - project mode mà thiếu `project.yaml`
-- framework mode mà thiếu `systems/pm-agent/STATUS.md`
+- framework mode mà thiếu `agent-system/agents/software/pm-agent/STATUS.md`
 
 ### Rule
 - không tạo report chính thức

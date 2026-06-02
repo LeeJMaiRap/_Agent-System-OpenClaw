@@ -62,16 +62,14 @@ function checkSchemaFile() {
   if (!exists(p)) return add('FAIL', p, 'schema file missing');
   let schema;
   try { schema = JSON.parse(read(p)); } catch (e) { return add('FAIL', p, `invalid schema JSON: ${e.message}`); }
-  for (const k of ['$schema', 'title', 'type', 'properties', 'oneOf']) if (!(k in schema)) add('FAIL', p, `schema missing key: ${k}`);
+  for (const k of ['$schema', 'title', 'type', 'properties']) if (!(k in schema)) add('FAIL', p, `schema missing key: ${k}`);
   if (schema.type !== 'object') add('FAIL', p, 'schema type must be object');
 }
 function checkProfileShape(skillsPath, data) {
-  const hasPrimary = Object.prototype.hasOwnProperty.call(data, 'primary_skills');
-  const hasExtension = Object.prototype.hasOwnProperty.call(data, 'extension_skills');
-  if (hasPrimary === hasExtension) add('FAIL', skillsPath, 'must contain exactly one of primary_skills or extension_skills');
-  if (hasPrimary && !('slug' in data)) add('FAIL', skillsPath, 'normal specialist profile missing slug');
-  if (hasPrimary && !('handoff_protocol' in data)) add('WARN', skillsPath, 'normal specialist profile missing handoff_protocol');
-  if (hasExtension && !('canonical_agent' in data)) add('WARN', skillsPath, 'adapter-style profile missing canonical_agent');
+  if (!Object.prototype.hasOwnProperty.call(data, 'primary_skills')) add('FAIL', skillsPath, 'specialist profile missing primary_skills');
+  if (Object.prototype.hasOwnProperty.call(data, 'extension_skills') || Object.prototype.hasOwnProperty.call(data, 'canonical_agent')) add('FAIL', skillsPath, 'non-current PM profile fields are not allowed');
+  if (!('slug' in data)) add('FAIL', skillsPath, 'specialist profile missing slug');
+  if (!('handoff_protocol' in data)) add('WARN', skillsPath, 'specialist profile missing handoff_protocol');
 }
 function checkAgents() {
   for (const agentDir of iterAgentDirs()) {
@@ -83,17 +81,9 @@ function checkAgents() {
     for (const k of REQUIRED_SKILLS_JSON_KEYS) if (!(k in data)) add('FAIL', skillsPath, `missing required key: ${k}`);
     checkProfileShape(skillsPath, data);
     const skillLists = {};
-    if ('primary_skills' in data) {
-      if (!Array.isArray(data.primary_skills) || data.primary_skills.length === 0) add('FAIL', skillsPath, 'primary_skills must be non-empty list');
-      skillLists.primary_skills = data.primary_skills;
-      skillLists.supporting_skills = data.supporting_skills || [];
-    } else if ('extension_skills' in data) {
-      if (!data.extension_skills || typeof data.extension_skills !== 'object' || Array.isArray(data.extension_skills)) add('FAIL', skillsPath, 'extension_skills must be object');
-      const primary = data.extension_skills?.primary || [];
-      if (!Array.isArray(primary) || primary.length === 0) add('FAIL', skillsPath, 'extension_skills.primary must be non-empty list');
-      skillLists['extension_skills.primary'] = primary;
-      skillLists['extension_skills.supporting'] = data.extension_skills?.supporting || [];
-    } else add('FAIL', skillsPath, 'missing primary_skills or extension_skills');
+    if (!Array.isArray(data.primary_skills) || data.primary_skills.length === 0) add('FAIL', skillsPath, 'primary_skills must be non-empty list');
+    skillLists.primary_skills = data.primary_skills || [];
+    skillLists.supporting_skills = data.supporting_skills || [];
     for (const [k, value] of Object.entries(skillLists)) {
       if (!Array.isArray(value)) { add('FAIL', skillsPath, `${k} must be list`); continue; }
       for (const targetRel of value) {
@@ -102,8 +92,7 @@ function checkAgents() {
       }
     }
     const hp = data.handoff_protocol;
-    const isAdapter = 'extension_skills' in data && 'canonical_agent' in data;
-    if (hp == null) { if (!isAdapter) add('WARN', skillsPath, 'handoff_protocol missing'); }
+    if (hp == null) add('WARN', skillsPath, 'handoff_protocol missing');
     else if (typeof hp !== 'object' || Array.isArray(hp)) add('FAIL', skillsPath, 'handoff_protocol must be object');
     else for (const k of HANDOFF_KEYS) {
       const targetRel = hp[k];

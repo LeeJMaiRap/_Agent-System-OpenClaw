@@ -3,7 +3,7 @@
 ## Chuẩn hóa đã chốt
 
 ### Framework reports
-- Path: `systems/pm-agent/reports/daily/YYYY-MM-DD.md`
+- Path: `agent-system/agents/software/pm-agent/reports/daily/YYYY-MM-DD.md`
 - Dùng để report cho chính PM Agent framework
 - Chỉ nên tạo khi framework còn active refinement / production-readiness work
 
@@ -23,7 +23,7 @@
 - 1 file/ngày là chuẩn
 
 ### Source of truth
-- Framework report → `systems/pm-agent/STATUS.md`, runtime, eval, skills, git log
+- Framework report → `agent-system/agents/software/pm-agent/STATUS.md`, runtime, eval, skills, git log
 - Project report → `project.yaml`, task/change/issue/status, decisions, approvals, handoffs, git log
 
 ## Kết luận

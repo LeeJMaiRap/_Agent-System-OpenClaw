@@ -4,10 +4,10 @@
 
 | Issue | Severity | Owner | Resolution |
 |---|---|---|---|
-| Persistence decision missing | High for implementation | PM Adapter / Doanh | Ask decision before task packet |
-| Specialist delegation not canonical active PM workflow | Medium | PM Adapter | Keep as proposed extension only |
-| No implementation task packet yet | High for implementation | PM Adapter | Create from systems/pm-agent template before code |
-| No preflight yet | High for Local+ verification | PM Adapter | Required before implementation |
+| Persistence decision missing | High for implementation | PM Agent / Doanh | Ask decision before task packet |
+| Specialist delegation not canonical active PM workflow | Medium | PM Agent | Keep as proposed extension only |
+| No implementation task packet yet | High for implementation | PM Agent | Create from agent-system/agents/software/pm-agent template before code |
+| No preflight yet | High for Local+ verification | PM Agent | Required before implementation |
 
 ## Affiliate Flow
 
@@ -19,4 +19,4 @@
 
 ## Cross-flow Issue
 
-PM Adapter must keep `systems/pm-agent` as canonical source and avoid silently turning proposed specialist handoff into active workflow.
+PM Agent must keep `agent-system/agents/software/pm-agent` as canonical source and avoid silently turning proposed specialist handoff into active workflow.

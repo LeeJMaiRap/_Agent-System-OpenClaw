@@ -6,8 +6,8 @@ User wants a tiny internal task board MVP. Need to verify new Architect Agent fi
 
 ## Constraints
 
-- Existing PM Agent in `systems/pm-agent` remains canonical.
-- PM Adapter only bridges handoff.
+- PM Agent in `agent-system/agents/software/pm-agent` remains canonical.
+- PM Agent only bridges handoff.
 - Verification Level: Paper.
 - No implementation.
 - No install/deploy/cloud/secrets.
@@ -15,13 +15,13 @@ User wants a tiny internal task board MVP. Need to verify new Architect Agent fi
 ## Expected Flow
 
 ```text
-PM Adapter
+PM Agent
   -> Product Agent: PRD/MVP scope
   -> Architect Agent: architecture brief/ADRs/boundaries
   -> Frontend Agent: UI spec based on architecture
   -> Backend Agent: API/data spec based on architecture
   -> QA Agent: artifact review and blocker status
-  -> PM Adapter: acceptance summary
+  -> PM Agent: acceptance summary
 ```
 
 ## Pass Criteria
@@ -30,4 +30,4 @@ PM Adapter
 - Architect adds module boundaries and ADRs.
 - Frontend/Backend use architecture as constraint.
 - QA can block implementation readiness.
-- PM Adapter does not claim working/tested.
+- PM Agent does not claim working/tested.

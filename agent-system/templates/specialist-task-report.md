@@ -97,7 +97,7 @@ Unsupported claims removed/downgraded:
 - Rollback point used:
 - Recovery steps if needed:
 
-## Handoff Back to PM Adapter
+## Handoff Back to PM Agent
 
 - Acceptance recommendation: Accept / Needs Review / Rework / Blocked
 - Next owner:

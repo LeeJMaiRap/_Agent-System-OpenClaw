@@ -3,18 +3,12 @@
   "$id": "agent-skills.schema.json",
   "title": "Agent Skills Mapping",
   "type": "object",
-  "required": ["agent", "status", "domain"],
+  "required": ["agent", "slug", "status", "domain", "primary_skills"],
   "properties": {
     "agent": { "type": "string", "minLength": 1 },
     "slug": { "type": "string", "minLength": 1 },
     "status": { "type": "string", "minLength": 1 },
     "domain": { "type": "string", "minLength": 1 },
-    "canonical_agent": { "type": "string", "minLength": 1 },
-    "canonical_identity": { "type": "string", "minLength": 1 },
-    "source_of_truth": {
-      "type": "array",
-      "items": { "type": "string", "minLength": 1 }
-    },
     "primary_skills": {
       "type": "array",
       "items": { "type": "string", "minLength": 1 },
@@ -24,26 +18,7 @@
       "type": "array",
       "items": { "type": "string", "minLength": 1 }
     },
-    "extension_skills": {
-      "type": "object",
-      "properties": {
-        "primary": {
-          "type": "array",
-          "items": { "type": "string", "minLength": 1 },
-          "minItems": 1
-        },
-        "supporting": {
-          "type": "array",
-          "items": { "type": "string", "minLength": 1 }
-        }
-      },
-      "required": ["primary"]
-    },
     "handoff_targets": {
-      "type": "array",
-      "items": { "type": "string", "minLength": 1 }
-    },
-    "proposed_handoff_targets": {
       "type": "array",
       "items": { "type": "string", "minLength": 1 }
     },
@@ -66,9 +41,14 @@
       "required": ["protocol", "task_packet_template", "task_report_template"]
     }
   },
-  "oneOf": [
-    { "required": ["primary_skills"] },
-    { "required": ["extension_skills"] }
-  ],
+  "not": {
+    "anyOf": [
+      { "required": ["extension_skills"] },
+      { "required": ["canonical_agent"] },
+      { "required": ["canonical_identity"] },
+      { "required": ["source_of_truth"] },
+      { "required": ["proposed_handoff_targets"] }
+    ]
+  },
   "additionalProperties": true
 }

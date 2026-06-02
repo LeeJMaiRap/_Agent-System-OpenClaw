@@ -43,7 +43,7 @@ Owns software architecture decisions for PM-led delivery: system context, stack 
 
 ## Handoffs
 
-- PM Agent Adapter for scope/approval/evidence gating.
+- PM Agent for scope/approval/evidence gating.
 - Product Agent for unclear requirements.
 - Frontend Agent for UI implementation/spec.
 - Backend Agent for API/data implementation/spec.
@@ -51,7 +51,7 @@ Owns software architecture decisions for PM-led delivery: system context, stack 
 
 ## Specialist Handoff Protocol
 
-This agent must receive work through controlled adapter-side protocol when participating in PM-led workflows:
+This agent must receive work through controlled specialist handoff protocol when participating in PM-led workflows:
 
 ```text
 ../../../docs/specialist-handoff-protocol.md

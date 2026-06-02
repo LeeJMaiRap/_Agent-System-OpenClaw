@@ -9,7 +9,6 @@ This directory contains Agent-System specialist profiles. Each profile folder is
 ## Software agents
 
 - `software/pm-agent/` — canonical integrated PM Agent.
-- `software/pm-agent-adapter-legacy/` — archived historical PM adapter only.
 - `software/product-agent/` — product requirements/MVP/user stories.
 - `software/architect-agent/` — architecture boundaries/ADRs/API-data notes.
 - `software/frontend-agent/` — frontend React/Next.js UI work.

@@ -33,7 +33,7 @@ PASS: Paper-level architecture artifact validation.
 Implementation remains blocked until:
 
 - persistence decision made;
-- PM Adapter creates Specialist Task Packet;
+- PM Agent creates Specialist Task Packet;
 - Local preflight done if code changes requested.
 
 ## Recommendation

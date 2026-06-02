@@ -6,12 +6,12 @@ No code implementation, dependency install, deployment, cloud, secrets, or destr
 
 ---
 
-## 1. PM Adapter Intake
+## 1. PM Agent Intake
 
 Canonical source:
 
 ```text
-systems/pm-agent/
+agent-system/agents/software/pm-agent/
 ```
 
 Adapter role:
@@ -20,7 +20,7 @@ Adapter role:
 bridge only; not replacement PM Agent
 ```
 
-PM Adapter decision:
+PM Agent decision:
 
 - Use existing PM rules for evidence/approval.
 - Use specialist handoff protocol.
@@ -202,7 +202,7 @@ production-ready
 
 ---
 
-## 7. PM Adapter Acceptance Summary
+## 7. PM Agent Acceptance Summary
 
 Accepted claim:
 
