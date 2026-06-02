@@ -17,6 +17,15 @@ agent-system/agents/software/pm-agent/templates/task-packet-template.md
 - **Requested by:**
 - **Date:**
 
+## Runtime Activation
+
+- **Runtime:** subagent
+- **Session mode:** isolated / fork / current
+- **OpenClaw action:** sessions_spawn
+- **Specialist role:** Product Agent / Architect Agent / Frontend Agent / Backend Agent / QA Agent / Business PM Agent / Market Research Agent / Product Hunter Agent / Content Copy Agent / Performance Analyst Agent
+- **taskName:** product_requirements / architecture_review / frontend_work / backend_work / qa_review / business_pm_plan / market_research / product_hunting / content_copy / performance_analysis
+- **Runtime mapping source:** `agent-system/docs/openclaw-runtime-activation.md#role-runtime-mapping`
+
 ## Canonical PM References
 
 - **PM Source:** `agent-system/agents/software/pm-agent/`
@@ -91,12 +100,44 @@ Rules:
 
 - **Verification Level:** Paper / Simulated / Local / Integration / Production
 - **Evidence Required:** command output / test result / screenshot / API output / log path / checklist / blocker
+- **Evidence Path:** `agent-system/tests/runtime/<YYYY-MM-DD>-<task-id>/`
 - **Preflight Required:** yes/no
 - **Preflight Checks:**
   - required tools/commands:
   - dependencies:
   - network/install policy:
   - credentials/secrets policy:
+
+## Evidence Routing
+
+Required evidence artifacts:
+
+```text
+packet.md
+report.md
+evidence.md
+```
+
+Optional evidence artifacts:
+
+```text
+logs.txt
+commands.txt
+screenshots/
+outputs/
+```
+
+## Acceptance Gate
+
+- **Acceptance owner:** PM Agent / Business PM Agent
+- **QA review required:** yes/no
+- **Human approval required:** yes/no
+- **Acceptance states allowed:** Accept / Needs Review / Rework / Blocked / Cancelled
+- **Acceptance criteria for this task:**
+
+```text
+- ...
+```
 
 ## Rollback / Recovery
 
@@ -123,4 +164,5 @@ Stop and escalate if:
 - Files changed:
 - Report required:
 - Evidence location:
+- Acceptance gate result required:
 - Next recommended action:

@@ -10,12 +10,35 @@ const TESTS_DIR = path.join(ROOT, 'tests');
 const REQUIRED_ROOT_FILES = [
   'INDEX.md', 'STATUS.md', 'README.md',
   'docs/activation-guide.md', 'docs/agent-role-matrix.md', 'docs/skills-json-schema.md',
-  'docs/specialist-handoff-protocol.md', 'schemas/agent-skills.schema.json',
+  'docs/specialist-handoff-protocol.md', 'docs/openclaw-runtime-activation.md', 'schemas/agent-skills.schema.json',
   'templates/specialist-task-packet.md', 'templates/specialist-task-report.md',
 ].map(p => path.join(ROOT, p));
 const REQUIRED_AGENT_FILES = ['AGENT.md', 'README.md', 'skills.json'];
 const REQUIRED_SKILLS_JSON_KEYS = ['agent', 'status', 'domain'];
 const HANDOFF_KEYS = ['protocol', 'task_packet_template', 'task_report_template'];
+const REQUIRED_RUNTIME_SPEC_HEADINGS = [
+  '## Purpose', '## Runtime Actors', '## Spawn Decision Rules', '## Session / Subagent Mapping',
+  '## Input Format', '## Output Format', '## Evidence Path', '## Acceptance Gate',
+  '## Role Runtime Mapping', '## Runtime Command Pattern', '## Stop Conditions', '## Completion Criteria',
+];
+const REQUIRED_PACKET_HEADINGS = [
+  '## Task Identity', '## Runtime Activation', '## Canonical PM References', '## Objective', '## Context',
+  '## Role Boundary', '## Work Mode Gate', '## Scope', '## Requirements', '## Verification',
+  '## Evidence Routing', '## Acceptance Gate', '## Rollback / Recovery', '## Stop Conditions', '## Expected Output',
+];
+const REQUIRED_REPORT_HEADINGS = [
+  '## Task Identity', '## Runtime Result', '## Summary', '## Work Mode Gate Result', '## Scope Performed',
+  '## Role Boundary Check', '## Files Changed', '## Commands / Checks Run', '## Verification',
+  '## Evidence Routing', '## Acceptance Gate Result', '## Claim Control', '## Blockers',
+  '## Risks / Caveats', '## Rollback / Recovery Notes', '## Handoff Back to PM Agent',
+];
+const REQUIRED_ROLE_TASKS = [
+  ['Product Agent', 'product_requirements'], ['Architect Agent', 'architecture_review'],
+  ['Frontend Agent', 'frontend_work'], ['Backend Agent', 'backend_work'], ['QA Agent', 'qa_review'],
+  ['Business PM Agent', 'business_pm_plan'], ['Market Research Agent', 'market_research'],
+  ['Product Hunter Agent', 'product_hunting'], ['Content Copy Agent', 'content_copy'],
+  ['Performance Analyst Agent', 'performance_analysis'],
+];
 const STALE_MARKERS = [
   'Market Research Agent | future',
   'Product Hunter Agent | future',
@@ -50,7 +73,7 @@ function walkFiles(dir, out = []) {
 }
 function iterAgentDirs() {
   // Integrated canonical PM Agent preserves original PM framework structure.
-  // Adapter-side AGENT.md/skills.json checks apply to specialist/legacy profiles only.
+  // AGENT.md/skills.json checks apply to specialist profiles only.
   return listDirs(AGENTS_DIR).flatMap(domain => listDirs(domain)).filter(p => path.basename(p) !== 'pm-agent');
 }
 
@@ -107,6 +130,42 @@ function checkTests() {
     for (const name of ['README.md', 'test-report.md']) if (!exists(path.join(testDir, name))) add('FAIL', path.join(testDir, name), 'required test file missing');
   }
 }
+function checkRequiredHeadings(filePath, headings) {
+  if (!exists(filePath)) return;
+  const text = read(filePath);
+  for (const h of headings) if (!text.includes(h)) add('FAIL', filePath, `missing required heading: ${h}`);
+}
+function checkRuntimeActivationSpec() {
+  const spec = path.join(ROOT, 'docs/openclaw-runtime-activation.md');
+  checkRequiredHeadings(spec, REQUIRED_RUNTIME_SPEC_HEADINGS);
+  if (!exists(spec)) return;
+  const text = read(spec);
+  for (const [role, taskName] of REQUIRED_ROLE_TASKS) {
+    if (!text.includes(role)) add('FAIL', spec, `runtime mapping missing role: ${role}`);
+    if (!text.includes(taskName)) add('FAIL', spec, `runtime mapping missing taskName: ${taskName}`);
+  }
+  for (const token of ['Output', 'Evidence', 'sessions_spawn', 'context=isolated', 'Acceptance']) {
+    if (!text.includes(token)) add('FAIL', spec, `runtime activation spec missing topic: ${token}`);
+  }
+}
+function checkRuntimeTemplates() {
+  const packet = path.join(ROOT, 'templates/specialist-task-packet.md');
+  const report = path.join(ROOT, 'templates/specialist-task-report.md');
+  checkRequiredHeadings(packet, REQUIRED_PACKET_HEADINGS);
+  checkRequiredHeadings(report, REQUIRED_REPORT_HEADINGS);
+  if (exists(packet)) {
+    const text = read(packet);
+    for (const token of ['**Runtime:**', '**Session mode:**', '**OpenClaw action:**', '**taskName:**', '**Evidence Path:**', 'Acceptance states allowed']) {
+      if (!text.includes(token)) add('FAIL', packet, `task packet missing runtime field: ${token}`);
+    }
+  }
+  if (exists(report)) {
+    const text = read(report);
+    for (const token of ['**Runtime:**', '**Session mode:**', '**OpenClaw action used:**', '**taskName:**', '**Evidence path:**', '**Recommended state:**']) {
+      if (!text.includes(token)) add('FAIL', report, `task report missing runtime field: ${token}`);
+    }
+  }
+}
 function checkStaleMarkers() {
   for (const root of [path.join(ROOT, 'docs'), path.join(ROOT, 'agents')]) {
     for (const p of walkFiles(root).filter(f => f.endsWith('.md'))) {
@@ -136,6 +195,8 @@ checkRequiredRoot();
 checkSchemaFile();
 checkAgents();
 checkTests();
+checkRuntimeActivationSpec();
+checkRuntimeTemplates();
 checkStaleMarkers();
 checkPaperOverclaims();
 const fails = findings.filter(f => f.severity === 'FAIL');

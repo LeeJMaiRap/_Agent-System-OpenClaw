@@ -5,6 +5,7 @@ Agent-System is the active workspace area for agent profiles, adapted skills, do
 ## Source of truth
 
 - Active PM Agent: `agents/software/pm-agent/`.
+- Runtime activation spec: `docs/openclaw-runtime-activation.md`.
 - Shared handoff protocol: `docs/specialist-handoff-protocol.md`.
 - Task templates: `templates/specialist-task-packet.md`, `templates/specialist-task-report.md`.
 

@@ -27,6 +27,7 @@ agent-system/agents/software/pm-agent/
 |---|---|---|
 | Agent profiles | PASS | PM Agent framework exists; 10 specialist profiles have `AGENT.md`, `README.md`, `skills.json` |
 | Skills mappings | PASS | `check-consistency.py` validates skill paths |
+| Runtime activation spec | PASS | role/taskName/output/evidence mapping exists |
 | Handoff protocol | PASS | shared packet/report templates exist |
 | Validation artifacts | PASS | 10 test folders with reports |
 | Consistency check | PASS | failures=0, warnings=0 |
@@ -130,6 +131,7 @@ RESULT: PASS
 | `INDEX.md` | high-level inventory |
 | `STATUS.md` | current dashboard |
 | `docs/activation-guide.md` | when/how to activate specialists |
+| `docs/openclaw-runtime-activation.md` | OpenClaw session/subagent runtime mapping |
 | `docs/specialist-handoff-protocol.md` | controlled handoff protocol |
 | `docs/agent-role-matrix.md` | ownership and boundaries |
 | `docs/safety-policy.md` | safety constraints |

@@ -32,6 +32,12 @@ After specialist work completes, require Specialist Task Report:
 agent-system/templates/specialist-task-report.md
 ```
 
+Runtime activation spec:
+
+```text
+agent-system/docs/openclaw-runtime-activation.md
+```
+
 Shared protocol:
 
 ```text
@@ -44,10 +50,14 @@ Activate specialist only when all are true:
 
 - [ ] Task has clear objective.
 - [ ] Task belongs to specialist role.
+- [ ] Runtime role mapping is selected.
+- [ ] `taskName` is selected from `docs/openclaw-runtime-activation.md`.
 - [ ] Allowed files/folders are explicit.
 - [ ] Forbidden actions are explicit.
 - [ ] Verification Level is stated.
 - [ ] Evidence required is stated.
+- [ ] Evidence path is stated.
+- [ ] Acceptance gate owner is stated.
 - [ ] Stop conditions are stated.
 - [ ] External actions are approval-gated.
 - [ ] PM / Business PM remains orchestrator.
@@ -79,6 +89,38 @@ verified authentic
 ```
 
 unless evidence matches canonical PM Agent verification policy.
+
+## Runtime Activation
+
+Default execution pattern:
+
+```text
+PM Agent main session
+  -> sessions_spawn(runtime=subagent, context=isolated, taskName=<mapped-taskName>)
+  -> Specialist Task Report
+  -> PM acceptance gate
+  -> optional QA review
+```
+
+Required mapping source:
+
+```text
+agent-system/docs/openclaw-runtime-activation.md#role-runtime-mapping
+```
+
+Default evidence path:
+
+```text
+agent-system/tests/runtime/<YYYY-MM-DD>-<task-id>/
+```
+
+Required runtime artifacts:
+
+```text
+packet.md
+report.md
+evidence.md
+```
 
 ## Software Team Activation
 
@@ -377,14 +419,16 @@ Stop and escalate if:
 
 ## Recommended Activation Flow
 
-1. PM / Business PM defines objective and Verification Level.
-2. PM / Business PM creates Specialist Task Packet.
-3. Specialist produces output within allowed scope.
-4. Specialist returns Specialist Task Report.
-5. PM / Business PM checks evidence and blockers.
-6. QA reviews when acceptance/evidence risk exists.
-7. Human approval gate handles external or high-risk action.
-8. PM / Business PM updates project state or marks blocker.
+1. PM / Business PM defines objective, Verification Level, and evidence path.
+2. PM / Business PM selects runtime role mapping and `taskName`.
+3. PM / Business PM creates Specialist Task Packet.
+4. OpenClaw spawns specialist subagent with `context=isolated` by default.
+5. Specialist produces output within allowed scope.
+6. Specialist returns Specialist Task Report.
+7. PM / Business PM checks evidence, blockers, and acceptance gate.
+8. QA reviews when acceptance/evidence risk exists.
+9. Human approval gate handles external or high-risk action.
+10. PM / Business PM updates project state or marks blocker.
 
 ## Current Readiness
 
@@ -393,4 +437,4 @@ Stop and escalate if:
 - Market Research Agent: Paper-validated.
 - Product Hunter Agent: Paper-validated.
 - Content Copy Agent and Performance Analyst Agent: validated inside business/full-team Paper simulations.
-- No live/external validation yet.
+- Controlled live read-only validation passed with limitations; external write actions remain unapproved.

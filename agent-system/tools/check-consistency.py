@@ -34,6 +34,7 @@ REQUIRED_ROOT_FILES = [
     ROOT / "docs" / "agent-role-matrix.md",
     ROOT / "docs" / "skills-json-schema.md",
     ROOT / "docs" / "specialist-handoff-protocol.md",
+    ROOT / "docs" / "openclaw-runtime-activation.md",
     ROOT / "schemas" / "agent-skills.schema.json",
     ROOT / "templates" / "specialist-task-packet.md",
     ROOT / "templates" / "specialist-task-report.md",
@@ -42,6 +43,29 @@ REQUIRED_ROOT_FILES = [
 REQUIRED_AGENT_FILES = ["AGENT.md", "README.md", "skills.json"]
 REQUIRED_SKILLS_JSON_KEYS = ["agent", "status", "domain"]
 HANDOFF_KEYS = ["protocol", "task_packet_template", "task_report_template"]
+REQUIRED_RUNTIME_SPEC_HEADINGS = [
+    "## Purpose", "## Runtime Actors", "## Spawn Decision Rules", "## Session / Subagent Mapping",
+    "## Input Format", "## Output Format", "## Evidence Path", "## Acceptance Gate",
+    "## Role Runtime Mapping", "## Runtime Command Pattern", "## Stop Conditions", "## Completion Criteria",
+]
+REQUIRED_PACKET_HEADINGS = [
+    "## Task Identity", "## Runtime Activation", "## Canonical PM References", "## Objective", "## Context",
+    "## Role Boundary", "## Work Mode Gate", "## Scope", "## Requirements", "## Verification",
+    "## Evidence Routing", "## Acceptance Gate", "## Rollback / Recovery", "## Stop Conditions", "## Expected Output",
+]
+REQUIRED_REPORT_HEADINGS = [
+    "## Task Identity", "## Runtime Result", "## Summary", "## Work Mode Gate Result", "## Scope Performed",
+    "## Role Boundary Check", "## Files Changed", "## Commands / Checks Run", "## Verification",
+    "## Evidence Routing", "## Acceptance Gate Result", "## Claim Control", "## Blockers",
+    "## Risks / Caveats", "## Rollback / Recovery Notes", "## Handoff Back to PM Agent",
+]
+REQUIRED_ROLE_TASKS = [
+    ("Product Agent", "product_requirements"), ("Architect Agent", "architecture_review"),
+    ("Frontend Agent", "frontend_work"), ("Backend Agent", "backend_work"), ("QA Agent", "qa_review"),
+    ("Business PM Agent", "business_pm_plan"), ("Market Research Agent", "market_research"),
+    ("Product Hunter Agent", "product_hunting"), ("Content Copy Agent", "content_copy"),
+    ("Performance Analyst Agent", "performance_analysis"),
+]
 STALE_MARKERS = [
     "Market Research Agent | future",
     "Product Hunter Agent | future",
@@ -213,6 +237,48 @@ def check_tests(findings: list[Finding]) -> None:
                 add(findings, "FAIL", p, "required test file missing")
 
 
+def check_required_headings(findings: list[Finding], file_path: Path, headings: list[str]) -> None:
+    if not file_path.exists():
+        return
+    text = file_path.read_text(encoding="utf-8", errors="replace")
+    for heading in headings:
+        if heading not in text:
+            add(findings, "FAIL", file_path, f"missing required heading: {heading}")
+
+
+def check_runtime_activation_spec(findings: list[Finding]) -> None:
+    spec = ROOT / "docs" / "openclaw-runtime-activation.md"
+    check_required_headings(findings, spec, REQUIRED_RUNTIME_SPEC_HEADINGS)
+    if not spec.exists():
+        return
+    text = spec.read_text(encoding="utf-8", errors="replace")
+    for role, task_name in REQUIRED_ROLE_TASKS:
+        if role not in text:
+            add(findings, "FAIL", spec, f"runtime mapping missing role: {role}")
+        if task_name not in text:
+            add(findings, "FAIL", spec, f"runtime mapping missing taskName: {task_name}")
+    for token in ["Output", "Evidence", "sessions_spawn", "context=isolated", "Acceptance"]:
+        if token not in text:
+            add(findings, "FAIL", spec, f"runtime activation spec missing topic: {token}")
+
+
+def check_runtime_templates(findings: list[Finding]) -> None:
+    packet = ROOT / "templates" / "specialist-task-packet.md"
+    report = ROOT / "templates" / "specialist-task-report.md"
+    check_required_headings(findings, packet, REQUIRED_PACKET_HEADINGS)
+    check_required_headings(findings, report, REQUIRED_REPORT_HEADINGS)
+    if packet.exists():
+        text = packet.read_text(encoding="utf-8", errors="replace")
+        for token in ["**Runtime:**", "**Session mode:**", "**OpenClaw action:**", "**taskName:**", "**Evidence Path:**", "Acceptance states allowed"]:
+            if token not in text:
+                add(findings, "FAIL", packet, f"task packet missing runtime field: {token}")
+    if report.exists():
+        text = report.read_text(encoding="utf-8", errors="replace")
+        for token in ["**Runtime:**", "**Session mode:**", "**OpenClaw action used:**", "**taskName:**", "**Evidence path:**", "**Recommended state:**"]:
+            if token not in text:
+                add(findings, "FAIL", report, f"task report missing runtime field: {token}")
+
+
 def check_stale_markers(findings: list[Finding]) -> None:
     scan_roots = [ROOT / "docs", ROOT / "agents"]
     for root in scan_roots:
@@ -255,6 +321,8 @@ def main() -> int:
     check_schema_file(findings)
     check_agents(findings)
     check_tests(findings)
+    check_runtime_activation_spec(findings)
+    check_runtime_templates(findings)
     check_stale_markers(findings)
     check_paper_overclaims(findings)
 

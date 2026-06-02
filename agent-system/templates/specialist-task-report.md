@@ -17,6 +17,14 @@ agent-system/agents/software/pm-agent/templates/task-report-template.md
 - **Date:**
 - **Status:** Done / Needs Review / Rework / Blocked / Cancelled
 
+## Runtime Result
+
+- **Runtime:** subagent / current session / manual simulation
+- **Session mode:** isolated / fork / current
+- **OpenClaw action used:** sessions_spawn / sessions_send / none
+- **taskName:** product_requirements / architecture_review / frontend_work / backend_work / qa_review / business_pm_plan / market_research / product_hunting / content_copy / performance_analysis
+- **Evidence path:** `agent-system/tests/runtime/<YYYY-MM-DD>-<task-id>/`
+
 ## Summary
 
 Short result summary.
@@ -65,6 +73,31 @@ result summary
   - test result:
   - screenshot/log/API output:
   - checklist:
+
+## Evidence Routing
+
+Required evidence artifacts completed:
+
+```text
+packet.md
+report.md
+evidence.md
+```
+
+Additional evidence:
+
+```text
+logs.txt / commands.txt / screenshots/ / outputs/
+```
+
+## Acceptance Gate Result
+
+- **Acceptance owner:** PM Agent / Business PM Agent
+- **QA review required:** yes/no
+- **QA result:** PASS / FAIL / BLOCKED / not required
+- **Human approval required:** yes/no
+- **Human approval status:** approved / missing / not required
+- **Recommended state:** Accept / Needs Review / Rework / Blocked / Cancelled
 
 ## Claim Control
 
