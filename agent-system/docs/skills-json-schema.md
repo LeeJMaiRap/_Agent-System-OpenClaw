@@ -65,14 +65,14 @@ PM Agent is special because canonical PM Agent now lives in:
 agent-system/agents/software/pm-agent/
 ```
 
-PM Agent may use:
+Archived adapter-style profiles may use:
 
 ```json
 {
-  "agent": "PM Agent Profile",
+  "agent": "PM Agent Adapter Legacy",
   "canonical_agent": "agent-system/agents/software/pm-agent",
   "canonical_identity": "Lệ",
-  "status": "adapter-draft",
+  "status": "legacy-adapter",
   "domain": "software",
   "source_of_truth": [],
   "extension_skills": {

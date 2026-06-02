@@ -77,21 +77,21 @@ Result:
 PASS: Paper-level skill artifact validation.
 ```
 
-## Phase 2 — Agent Profiles + PM Adapter Alignment
+## Phase 2 — Agent Profiles + PM Agent Alignment
 
 Status: done for Phase 1 profiles
 
 Completed:
 
 - Created 7 profiles:
-  - PM Agent Adapter
+  - PM Agent
   - Product Agent
   - Frontend Agent
   - Backend Agent
   - QA Agent
   - Content Copy Agent
   - Performance Analyst Agent
-- Converted draft PM profile into adapter only.
+- Preserved PM Agent as active integrated PM framework.
 - Audited existing PM Agent:
   - `audits/existing-pm-agent.md`
 - Updated mapping docs:
@@ -104,7 +104,7 @@ Result:
 
 ```text
 PASS: PM source-of-truth clarified.
-PASS: PM Adapter no longer implies new PM Agent.
+PASS: legacy PM adapter no longer implies new PM Agent.
 ```
 
 ## Phase 3 — Specialist Handoff Protocol

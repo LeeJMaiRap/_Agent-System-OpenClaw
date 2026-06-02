@@ -22,7 +22,7 @@ Canonical PM Agent remains:
 agent-system/agents/software/pm-agent/
 ```
 
-Adapter profile only:
+Active PM framework:
 
 ```text
 agent-system/agents/software/pm-agent/
@@ -31,7 +31,7 @@ agent-system/agents/software/pm-agent/
 Meaning:
 
 - `agent-system/agents/software/pm-agent` is source of truth for PM identity, workflow, policies, templates, verification levels, approvals, and project lifecycle.
-- `agent-system/agents/software/pm-agent` is an adapter profile for future team/delegation design.
+- `agent-system/agents/software/pm-agent` is the integrated canonical PM Agent, not the legacy adapter.
 - Specialist handoff is proposed extension only until approved.
 - Do not modify `agent-system/agents/software/pm-agent` from this mapping without explicit approval.
 

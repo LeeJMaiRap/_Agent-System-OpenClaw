@@ -13,7 +13,7 @@ Canonical PM Agent inside Agent-System:
 agent-system/agents/software/pm-agent/
 ```
 
-Adapter profile:
+Active PM framework:
 
 ```text
 agent-system/agents/software/pm-agent/
@@ -21,8 +21,8 @@ agent-system/agents/software/pm-agent/
 
 Meaning:
 
-- PM Agent is not newly created in `agent-system`.
-- `agent-system/agents/software/pm-agent` is bridge/adapter only.
+- PM Agent is the canonical integrated PM Agent inside `agent-system`.
+- `agent-system/agents/software/pm-agent` is not the legacy adapter.
 - Existing PM Agent workflow, policies, templates, verification levels, and approvals remain authoritative.
 - Specialist delegation is proposed extension until explicitly approved.
 

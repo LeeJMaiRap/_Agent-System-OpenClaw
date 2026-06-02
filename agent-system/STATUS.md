@@ -40,7 +40,7 @@ agent-system/agents/software/pm-agent/
 
 | Agent | Path | Readiness | Notes |
 |---|---|---|---|
-| PM Agent Adapter | `agents/software/pm-agent/` | adapter-draft | bridges canonical PM to specialist layer |
+| PM Agent | `agents/software/pm-agent/` | active PM framework | canonical integrated PM Agent; preserves validated PM workflow |
 | Product Agent | `agents/software/product-agent/` | Paper-simulated | requirements/PRD/acceptance |
 | Architect Agent | `agents/software/architect-agent/` | Paper-simulated | architecture/ADR/boundaries |
 | Frontend Agent | `agents/software/frontend-agent/` | Paper-simulated | UI/client/frontend verification |

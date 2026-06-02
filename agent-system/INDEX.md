@@ -31,7 +31,7 @@ External actions stay approval-gated.
 
 | Agent | Path | Status | Primary Skill |
 |---|---|---|---|
-| PM Agent Adapter | `agents/software/pm-agent/` | draft adapter | `project-planning` |
+| PM Agent | `agents/software/pm-agent/` | active PM framework | `project-planning` |
 | Product Agent | `agents/software/product-agent/` | draft profile | `product-requirements` |
 | Architect Agent | `agents/software/architect-agent/` | draft profile | `software-architecture` |
 | Frontend Agent | `agents/software/frontend-agent/` | draft profile | `frontend-react` |
@@ -92,7 +92,7 @@ External actions stay approval-gated.
 - Live web/marketplace/product validation not performed.
 - Affiliate product candidates in Product Hunter validation are synthetic.
 - No posting, messaging, ads, purchase, payment/API, affiliate-link change, or external write has been approved.
-- `agent-system/` remains draft adapter/specialist layer, not production workflow.
+- `agent-system/` remains a draft specialist layer around the active PM Agent, not production workflow.
 
 ## Next Options
 
