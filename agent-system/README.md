@@ -19,8 +19,24 @@ Agent-System is the active workspace area for agent profiles, adapted skills, do
 - `reports/` — hardening/schema/consistency reports.
 - `schemas/` — JSON schema for agent skills metadata.
 - `templates/` — specialist packet/report templates.
-- `tools/` — utility scripts: `check-consistency.py` (Python 3) and `check-consistency.js` (Node fallback).
+- `tools/` — utility scripts: `check-consistency.js` (official/canonical Node checker) and `check-consistency.py` (optional Python parity checker when Python 3 exists).
 - `sources/` — source-material staging area; currently present but not populated with active source files.
+
+## Validation
+
+Official validation command:
+
+```text
+node agent-system/tools/check-consistency.js
+```
+
+Optional parity check when Python 3 exists:
+
+```text
+python3 agent-system/tools/check-consistency.py
+```
+
+Missing Python 3 does not fail official validation.
 
 ## Current status
 

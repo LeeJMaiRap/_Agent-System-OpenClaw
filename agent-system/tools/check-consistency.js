@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Check agent-system structural consistency. Node fallback for environments without python3.
+// Official/canonical agent-system structural consistency checker.
 const fs = require('fs');
 const path = require('path');
 

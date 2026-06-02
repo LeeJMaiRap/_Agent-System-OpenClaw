@@ -86,16 +86,32 @@ External actions stay approval-gated.
 | Product Hunter validation | `tests/2026-05-27-product-hunter-validation/` | PASS Paper-level with limitations |
 | Full affiliate team simulation | `tests/2026-05-27-full-affiliate-team-simulation/` | PASS Paper-level with limitations |
 
+## Validation
+
+Official validation command:
+
+```text
+node agent-system/tools/check-consistency.js
+```
+
+Optional parity check when Python 3 exists:
+
+```text
+python3 agent-system/tools/check-consistency.py
+```
+
+Missing Python 3 does not fail official validation.
+
 ## Current Known Limitations
 
 - All business campaign validation remains Paper-level.
 - Live web/marketplace/product validation not performed.
 - Affiliate product candidates in Product Hunter validation are synthetic.
 - No posting, messaging, ads, purchase, payment/API, affiliate-link change, or external write has been approved.
-- `agent-system/` remains a draft specialist layer around the active PM Agent, not production workflow.
+- `agent-system/` is now a quality-gated workflow layer around the active PM Agent, not a production automation system.
 
 ## Next Options
 
 1. Commit baseline if Doanh approves.
 2. Define live read-only validation scope if moving affiliate campaign beyond Paper level.
-3. Continue hardening with automated consistency script/report.
+3. Continue hardening with quality-gated runtime evidence and canonical Node consistency checker.

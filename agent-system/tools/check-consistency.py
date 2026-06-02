@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-"""Check agent-system structural consistency.
+"""Optional Python parity checker for agent-system structural consistency.
 
-Usage:
+Official checker:
+  node agent-system/tools/check-consistency.js
+
+Usage when Python 3 exists:
   python3 agent-system/tools/check-consistency.py
 
 Checks:

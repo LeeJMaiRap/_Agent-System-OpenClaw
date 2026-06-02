@@ -13,7 +13,13 @@ Schema file:
 agent-system/schemas/agent-skills.schema.json
 ```
 
-Consistency checker:
+Official consistency checker:
+
+```text
+agent-system/tools/check-consistency.js
+```
+
+Optional Python parity checker:
 
 ```text
 agent-system/tools/check-consistency.py
@@ -119,13 +125,21 @@ Business/affiliate agents should include relevant no-external-action flags:
 
 ## Validation
 
-Run:
+Run official checker:
+
+```text
+node agent-system/tools/check-consistency.js
+```
+
+Optional parity check when Python 3 exists:
 
 ```text
 python3 agent-system/tools/check-consistency.py
 ```
 
-Expected current result:
+Missing Python 3 does not fail official validation.
+
+Expected current official result:
 
 ```text
 failures: 0
