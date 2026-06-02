@@ -145,6 +145,21 @@ Checked available artifacts under `agent-system/tests/runtime/2026-06-02-clone-f
 
 Artifacts align with delivered MVP.
 
+## Must Requirement Results
+
+| Req ID | Severity | Requirement | Evidence | Status | Notes |
+|---|---|---|---|---|---|
+| REQ-001 | Must | Register/login/logout works | `clone-facebook/tests/api.test.js` | PASS | API test covers flow. |
+| REQ-002 | Must | Profile update works | `clone-facebook/tests/api.test.js` | PASS | Bio update asserted. |
+| REQ-003 | Must | Create/edit/delete own post works | `clone-facebook/tests/api.test.js`, `clone-facebook/src/server.js` | PASS | Owner controls verified. |
+| REQ-004 | Must | Like/unlike works | `clone-facebook/tests/api.test.js`, `backend/backend-report.md` | PASS | Like count verified. |
+| REQ-005 | Must | Comment create works | `clone-facebook/tests/api.test.js` | PASS | Comment content asserted. |
+| REQ-006 | Must | Feed shows own/followed posts | `clone-facebook/tests/api.test.js` | PASS | Bob sees Alice post after follow. |
+| REQ-007 | Must | Follow works | `clone-facebook/tests/api.test.js`, `clone-facebook/src/server.js` | PASS | Follow drives feed. |
+| REQ-008 | Must | Local run/test documented | `clone-facebook/README.md`, `evidence/evidence.md` | PASS | Direct node commands available. |
+| REQ-009 | Must | No Facebook/Meta app-facing branding/assets/copy | branding grep, `clone-facebook/public/` | PASS | Only internal/meta tag matches. |
+| REQ-010 | Must | Specialist/PM evidence exists | `agent-system/tests/runtime/2026-06-02-clone-facebook/` | PASS | Reports present. |
+
 ## Findings
 
 ### Blockers

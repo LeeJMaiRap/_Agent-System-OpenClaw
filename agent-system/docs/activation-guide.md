@@ -72,6 +72,16 @@ Default for new specialist flow:
 Paper
 ```
 
+Quality-gated runtime tests must include:
+
+- requirement coverage matrix;
+- owner agent per requirement;
+- implementation file path per implemented requirement;
+- evidence citation per accepted claim;
+- PASS/FAIL/BLOCKED/WAIVED status per Must requirement;
+- architecture conformance report when implementation exists;
+- PM acceptance gate with evidence citations.
+
 Do not claim:
 
 ```text
@@ -119,7 +129,17 @@ Required runtime artifacts:
 ```text
 packet.md
 report.md
-evidence.md
+test-report.md
+coverage-matrix.md
+pm-acceptance-gate.md
+evidence/evidence.md
+```
+
+Required when implementation exists:
+
+```text
+qa/qa-report.md
+architecture/conformance-report.md
 ```
 
 ## Software Team Activation
@@ -218,6 +238,14 @@ Activate when:
 - acceptance needs PASS/FAIL/BLOCKED;
 - regression/security/accessibility/performance risk needs scan;
 - evidence claim needs validation.
+
+QA must report each Must requirement separately:
+
+```text
+REQ-ID | Severity=Must | Evidence | PASS/FAIL/BLOCKED/WAIVED
+```
+
+QA must not issue only a global PASS when Must requirements are unverified.
 
 Do not activate for:
 

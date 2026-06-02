@@ -12,6 +12,7 @@ const REQUIRED_ROOT_FILES = [
   'docs/activation-guide.md', 'docs/agent-role-matrix.md', 'docs/skills-json-schema.md',
   'docs/specialist-handoff-protocol.md', 'docs/openclaw-runtime-activation.md', 'schemas/agent-skills.schema.json',
   'templates/specialist-task-packet.md', 'templates/specialist-task-report.md',
+  'templates/requirement-coverage-matrix.md', 'templates/pm-acceptance-gate.md', 'templates/architecture-conformance-report.md',
 ].map(p => path.join(ROOT, p));
 const REQUIRED_AGENT_FILES = ['AGENT.md', 'README.md', 'skills.json'];
 const REQUIRED_SKILLS_JSON_KEYS = ['agent', 'status', 'domain'];
@@ -166,6 +167,47 @@ function checkRuntimeTemplates() {
     }
   }
 }
+function isRuntimeProjectDir(dir) {
+  return exists(path.join(dir, 'packet.md')) || exists(path.join(dir, 'report.md')) || exists(path.join(dir, 'test-report.md'));
+}
+function tableHasMustStatus(text) {
+  return /\bMust\b/i.test(text) && /\b(PASS|FAIL|BLOCKED|WAIVED)\b/.test(text);
+}
+function hasEvidenceCitation(text) {
+  return /Evidence Citations/i.test(text) && /`[^`]+`/.test(text);
+}
+function checkQualityGatedRuntimeTests() {
+  const runtimeRoot = path.join(TESTS_DIR, 'runtime');
+  if (!exists(runtimeRoot)) return;
+  for (const dir of listDirs(runtimeRoot)) {
+    if (!isRuntimeProjectDir(dir)) continue;
+    const coverage = path.join(dir, 'coverage-matrix.md');
+    const gate = path.join(dir, 'pm-acceptance-gate.md');
+    const qa = path.join(dir, 'qa/qa-report.md');
+    const archDir = path.join(dir, 'architecture');
+    const conformance = path.join(archDir, 'conformance-report.md');
+    if (!exists(coverage)) add('FAIL', coverage, 'runtime test coverage matrix missing');
+    else {
+      const text = read(coverage);
+      for (const token of ['Owner Agent', 'Implementation File', 'Test / Evidence', 'Must Requirement Summary']) {
+        if (!text.includes(token)) add('FAIL', coverage, 'coverage matrix missing topic: ' + token);
+      }
+      if (!tableHasMustStatus(text)) add('FAIL', coverage, 'coverage matrix must include Must requirement PASS/FAIL/BLOCKED/WAIVED status');
+    }
+    if (!exists(qa)) add('FAIL', qa, 'runtime implementation QA report missing');
+    else if (!tableHasMustStatus(read(qa))) add('FAIL', qa, 'QA report must include PASS/FAIL/BLOCKED/WAIVED per Must requirement');
+    if (!exists(gate)) add('FAIL', gate, 'PM acceptance gate missing');
+    else if (!hasEvidenceCitation(read(gate))) add('FAIL', gate, 'PM acceptance gate must cite evidence');
+    if (exists(archDir) && !exists(conformance)) add('FAIL', conformance, 'architecture conformance report missing for implementation runtime test');
+    else if (exists(conformance)) {
+      const text = read(conformance);
+      for (const token of ['Planned Architecture', 'Actual Implementation', 'Conformance Matrix', 'Architecture conformance']) {
+        if (!text.includes(token)) add('FAIL', conformance, 'architecture conformance missing topic: ' + token);
+      }
+    }
+  }
+}
+
 function checkStaleMarkers() {
   for (const root of [path.join(ROOT, 'docs'), path.join(ROOT, 'agents')]) {
     for (const p of walkFiles(root).filter(f => f.endsWith('.md'))) {
@@ -197,6 +239,7 @@ checkAgents();
 checkTests();
 checkRuntimeActivationSpec();
 checkRuntimeTemplates();
+checkQualityGatedRuntimeTests();
 checkStaleMarkers();
 checkPaperOverclaims();
 const fails = findings.filter(f => f.severity === 'FAIL');

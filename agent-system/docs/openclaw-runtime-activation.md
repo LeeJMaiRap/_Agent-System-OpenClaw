@@ -1,6 +1,6 @@
 # OpenClaw Runtime Activation Spec
 
-Status: runnable-workflow draft
+Status: quality-gated workflow
 Scope: Agent-System specialist activation inside OpenClaw workspace
 
 ## Purpose
@@ -11,7 +11,7 @@ Define how PM Agent routes work to specialist agents through OpenClaw sessions/s
 agent-system/agents/software/pm-agent/
 ```
 
-This spec enables runnable workflow discipline. It does not authorize production deploys, external posting, purchases, payments, ads, or API writes.
+This spec enables quality-gated runnable workflow discipline. It does not authorize production deploys, external posting, purchases, payments, ads, or API writes.
 
 ## Runtime Actors
 
@@ -127,7 +127,17 @@ Required files when a runnable workflow test is performed:
 ```text
 packet.md
 report.md
-evidence.md
+test-report.md
+coverage-matrix.md
+pm-acceptance-gate.md
+evidence/evidence.md
+```
+
+Required when code or project implementation exists:
+
+```text
+qa/qa-report.md
+architecture/conformance-report.md
 ```
 
 Optional files:
@@ -146,6 +156,8 @@ Evidence rules:
 - Local: command output required.
 - Integration: integration logs/API output required.
 - Production: requires explicit approval before action.
+- Every Must requirement must map to owner agent, implementation file, test/evidence, and PASS/FAIL/BLOCKED/WAIVED status.
+- WAIVED Must requirements require rationale and PM/human acceptance citation.
 
 ## Acceptance Gate
 
@@ -154,6 +166,11 @@ PM Agent may accept specialist result only when:
 - report exists;
 - role boundary was respected;
 - evidence matches requested verification level;
+- coverage matrix exists for runtime tests;
+- every Must requirement has PASS or WAIVED status with cited evidence;
+- PM acceptance gate cites evidence for each acceptance claim;
+- architecture conformance report exists when implementation exists;
+- QA report includes PASS/FAIL/BLOCKED status for each Must requirement when code/project implementation exists;
 - unsupported claims are removed or downgraded;
 - no unresolved blocker exists;
 - QA reviewed when task involves code, security, release, or high risk;
@@ -167,6 +184,15 @@ Needs Review
 Rework
 Blocked
 Cancelled
+```
+
+Quality gate states:
+
+```text
+PASS
+FAIL
+BLOCKED
+WAIVED
 ```
 
 ## Role Runtime Mapping
@@ -217,5 +243,9 @@ Runnable workflow is complete when:
 - specialist spawned or simulated with declared runtime mapping;
 - report exists;
 - evidence path exists;
-- PM acceptance gate records final state;
+- coverage matrix exists;
+- every Must requirement has PASS/FAIL/BLOCKED/WAIVED status;
+- PM acceptance gate records final state and cites evidence;
+- QA report records Must requirement results when implementation exists;
+- architecture conformance report records planned vs actual implementation when implementation exists;
 - consistency checker passes.

@@ -96,6 +96,17 @@ Rules:
 - Non-functional requirements:
 - Acceptance criteria:
 
+### Requirement Coverage Seed
+
+| Req ID | Severity | Requirement | Owner Agent | Expected implementation file(s) | Expected evidence | Required status |
+|---|---|---|---|---|---|---|
+| REQ-001 | Must / Should / Could / Waived |  |  | `path` | `path` or command | PASS / FAIL / BLOCKED / WAIVED |
+
+Rules:
+
+- Every Must requirement must have owner agent, implementation target, evidence target, and final PASS/FAIL/BLOCKED/WAIVED status.
+- WAIVED Must requirements require rationale and PM/human acceptance.
+
 ## Verification
 
 - **Verification Level:** Paper / Simulated / Local / Integration / Production
@@ -115,7 +126,17 @@ Required evidence artifacts:
 ```text
 packet.md
 report.md
-evidence.md
+test-report.md
+coverage-matrix.md
+pm-acceptance-gate.md
+evidence/evidence.md
+```
+
+Required when implementation exists:
+
+```text
+qa/qa-report.md
+architecture/conformance-report.md
 ```
 
 Optional evidence artifacts:
@@ -137,6 +158,15 @@ outputs/
 
 ```text
 - ...
+```
+
+Quality gate requirements:
+
+```text
+- coverage-matrix.md exists and every Must has PASS/FAIL/BLOCKED/WAIVED.
+- qa/qa-report.md includes PASS/FAIL/BLOCKED per Must when implementation exists.
+- pm-acceptance-gate.md cites evidence for every acceptance claim.
+- architecture/conformance-report.md exists when implementation exists.
 ```
 
 ## Rollback / Recovery

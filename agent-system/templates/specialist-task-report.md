@@ -74,6 +74,17 @@ result summary
   - screenshot/log/API output:
   - checklist:
 
+### Requirement Results
+
+| Req ID | Severity | Requirement | Evidence | Status | Notes |
+|---|---|---|---|---|---|
+| REQ-001 | Must / Should / Could / Waived |  | `path` or command output | PASS / FAIL / BLOCKED / WAIVED |  |
+
+Rules:
+
+- Each Must requirement assigned to this specialist must have explicit PASS/FAIL/BLOCKED/WAIVED.
+- Do not replace per-Must results with only a global PASS.
+
 ## Evidence Routing
 
 Required evidence artifacts completed:
@@ -81,7 +92,17 @@ Required evidence artifacts completed:
 ```text
 packet.md
 report.md
-evidence.md
+test-report.md
+coverage-matrix.md
+pm-acceptance-gate.md
+evidence/evidence.md
+```
+
+Required when implementation exists:
+
+```text
+qa/qa-report.md
+architecture/conformance-report.md
 ```
 
 Additional evidence:
@@ -97,6 +118,11 @@ logs.txt / commands.txt / screenshots/ / outputs/
 - **QA result:** PASS / FAIL / BLOCKED / not required
 - **Human approval required:** yes/no
 - **Human approval status:** approved / missing / not required
+- **Must requirements PASS:**
+- **Must requirements FAIL:**
+- **Must requirements BLOCKED:**
+- **Must requirements WAIVED:**
+- **Evidence citations complete:** yes/no
 - **Recommended state:** Accept / Needs Review / Rework / Blocked / Cancelled
 
 ## Claim Control

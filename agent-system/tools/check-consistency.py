@@ -38,6 +38,9 @@ REQUIRED_ROOT_FILES = [
     ROOT / "schemas" / "agent-skills.schema.json",
     ROOT / "templates" / "specialist-task-packet.md",
     ROOT / "templates" / "specialist-task-report.md",
+    ROOT / "templates" / "requirement-coverage-matrix.md",
+    ROOT / "templates" / "pm-acceptance-gate.md",
+    ROOT / "templates" / "architecture-conformance-report.md",
 ]
 
 REQUIRED_AGENT_FILES = ["AGENT.md", "README.md", "skills.json"]
@@ -279,6 +282,52 @@ def check_runtime_templates(findings: list[Finding]) -> None:
                 add(findings, "FAIL", report, f"task report missing runtime field: {token}")
 
 
+def is_runtime_project_dir(path: Path) -> bool:
+    return any((path / name).exists() for name in ["packet.md", "report.md", "test-report.md"])
+
+def table_has_must_status(text: str) -> bool:
+    return bool(re.search(r"\bMust\b", text, flags=re.IGNORECASE)) and bool(re.search(r"\b(PASS|FAIL|BLOCKED|WAIVED)\b", text))
+
+def has_evidence_citation(text: str) -> bool:
+    return bool(re.search(r"Evidence Citations", text, flags=re.IGNORECASE)) and bool(re.search(r"`[^`]+`", text))
+
+def check_quality_gated_runtime_tests(findings: list[Finding]) -> None:
+    runtime_root = TESTS_DIR / "runtime"
+    if not runtime_root.exists():
+        return
+    for test_dir in sorted(p for p in runtime_root.iterdir() if p.is_dir()):
+        if not is_runtime_project_dir(test_dir):
+            continue
+        coverage = test_dir / "coverage-matrix.md"
+        gate = test_dir / "pm-acceptance-gate.md"
+        qa = test_dir / "qa" / "qa-report.md"
+        arch_dir = test_dir / "architecture"
+        conformance = arch_dir / "conformance-report.md"
+        if not coverage.exists():
+            add(findings, "FAIL", coverage, "runtime test coverage matrix missing")
+        else:
+            text = coverage.read_text(encoding="utf-8", errors="replace")
+            for token in ["Owner Agent", "Implementation File", "Test / Evidence", "Must Requirement Summary"]:
+                if token not in text:
+                    add(findings, "FAIL", coverage, f"coverage matrix missing topic: {token}")
+            if not table_has_must_status(text):
+                add(findings, "FAIL", coverage, "coverage matrix must include Must requirement PASS/FAIL/BLOCKED/WAIVED status")
+        if not qa.exists():
+            add(findings, "FAIL", qa, "runtime implementation QA report missing")
+        elif not table_has_must_status(qa.read_text(encoding="utf-8", errors="replace")):
+            add(findings, "FAIL", qa, "QA report must include PASS/FAIL/BLOCKED/WAIVED per Must requirement")
+        if not gate.exists():
+            add(findings, "FAIL", gate, "PM acceptance gate missing")
+        elif not has_evidence_citation(gate.read_text(encoding="utf-8", errors="replace")):
+            add(findings, "FAIL", gate, "PM acceptance gate must cite evidence")
+        if arch_dir.exists() and not conformance.exists():
+            add(findings, "FAIL", conformance, "architecture conformance report missing for implementation runtime test")
+        elif conformance.exists():
+            text = conformance.read_text(encoding="utf-8", errors="replace")
+            for token in ["Planned Architecture", "Actual Implementation", "Conformance Matrix", "Architecture conformance"]:
+                if token not in text:
+                    add(findings, "FAIL", conformance, f"architecture conformance missing topic: {token}")
+
 def check_stale_markers(findings: list[Finding]) -> None:
     scan_roots = [ROOT / "docs", ROOT / "agents"]
     for root in scan_roots:
@@ -323,6 +372,7 @@ def main() -> int:
     check_tests(findings)
     check_runtime_activation_spec(findings)
     check_runtime_templates(findings)
+    check_quality_gated_runtime_tests(findings)
     check_stale_markers(findings)
     check_paper_overclaims(findings)
 
